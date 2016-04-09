@@ -47,14 +47,14 @@
         },
         enter: function ( el, done ) {
           setTimeout( ()=> { el.classList.add( 'modal-in' ); }, 0 );
-          setTimeout( done, 400 );
+          setTimeout( done, 400 ); // todo Use transitionEnd event
         },
         beforeLeave: function ( el ) {
           el.classList.remove( 'modal-in' );
         },
         leave: function ( el, done ) {
           el.classList.add( 'modal-out' );
-          setTimeout( done, 400 );
+          setTimeout( done, 400 ); // todo Use transitionEnd event
         }
       }
     },
@@ -85,7 +85,7 @@
        * @param {String} [title]
        * @returns {Promise}
        */
-      confirm( text, title = '' ) {
+      confirm( text, title = 'Are you sure?' ) {
         this.type = 'confirm';
         this.text = text;
         this.title = title;

@@ -23,6 +23,9 @@ router.map( {
   },
   '/content-block': {
     component: require( './content-block.vue' )
+  },
+  '/side': {
+    component: require( './side.vue' )
   }
 } );
 

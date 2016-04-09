@@ -4,4 +4,5 @@
   <a v-link="'/searchbar'">Search Bar</a>
   <a v-link="'/toolbar'">Toolbar</a>
   <a v-link="'/content-block'">Content Block</a>
+  <a v-link="'/side'">Side Panels</a>
 </template>
