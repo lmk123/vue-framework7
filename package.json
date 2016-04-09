@@ -6,7 +6,8 @@
     "url": "git+https://github.com/lmk123/vue-framework7.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline --open --config build/webpack.dev.config.js"
+    "start": "webpack-dev-server --inline --open --config build/webpack.dev.config.js",
+    "web": "webpack --config build/webpack.build.config.js"
   },
   "peerDependencies": {
     "vue": "^1.0.21",
