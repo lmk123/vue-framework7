@@ -7,6 +7,8 @@
           <f7-toolbar tabbar :tabs="tabs2" v-show="type === 'tabbar'"></f7-toolbar>
           <f7-toolbar tabbar :tabs="tabs3" v-show="type === 'tabbar-label'"></f7-toolbar>
           <f7-page-content>
+            <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/toolbar.vue">Code is
+              here.</a>
             <f7-content-block title="Choose one:" inner>
               <label><input type="radio" value="toolbar" v-model="type">Toolbar</label>
               <label><input type="radio" value="tabbar" v-model="type">Tab Bar</label>

@@ -1,5 +1,7 @@
 <template>
   <f7-modal v-ref:modal></f7-modal>
+  <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/modal.vue">Code is
+              here.</a>
   <button @click="alert">Alert</button>
   <button @click="confirm">Confirm</button>
   <button @click="prompt">Prompt</button>
