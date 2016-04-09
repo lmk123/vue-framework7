@@ -1,6 +1,16 @@
 {
   "name": "vue-framework7",
-  "version": "0.0.2",
+  "version": "0.0.3",
+  "description" : "Framework7 components built with Vue.js" ,
+  "main": "./components/index.js" ,
+  "keywords": [
+    "vue",
+    "framework7",
+    "component"
+  ] ,
+  "files": [
+    "components"
+  ] ,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lmk123/vue-framework7.git"
