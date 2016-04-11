@@ -2,13 +2,13 @@
   <f7-side left-effect="reveal" right-effect="cover" v-ref:side>
     <f7-content-block slot="left">
       <p>Left side.</p>
-      <button @click="hideLeft">Close me.</button>
-      <button @click="showRight">Open Right.</button>
+      <button v-touch:tap="hideLeft">Close me.</button>
+      <button v-touch:tap="showRight">Open Right.</button>
     </f7-content-block>
     <f7-content-block slot="right">
       <p>Right side.</p>
-      <button @click="hideRight">Close me.</button>
-      <button @click="showLeft">Open Left.</button>
+      <button v-touch:tap="hideRight">Close me.</button>
+      <button v-touch:tap="showLeft">Open Left.</button>
     </f7-content-block>
   </f7-side>
   <f7-views>
@@ -19,8 +19,8 @@
             <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/side.vue">Code is
               here.</a>
             <f7-content-block>
-              <button @click="showLeft">Left side with "reveal" effect.</button>
-              <button @click="showRight">Right side with "cover" effect.</button>
+              <button v-touch:tap="showLeft">Left side with "reveal" effect.</button>
+              <button v-touch:tap="showRight">Right side with "cover" effect.</button>
             </f7-content-block>
           </f7-page-content>
         </f7-page>

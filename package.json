@@ -1,16 +1,16 @@
 {
   "name": "vue-framework7",
-  "version": "0.0.3",
-  "description" : "Framework7 components built with Vue.js" ,
-  "main": "./components/index.js" ,
+  "version": "0.0.4",
+  "description" : "Framework7 components built with Vue.js",
+  "main": "./components/index.js",
   "keywords": [
     "vue",
     "framework7",
     "component"
-  ] ,
+  ],
   "files": [
     "components"
-  ] ,
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lmk123/vue-framework7.git"
@@ -19,14 +19,13 @@
     "start": "webpack-dev-server --inline --open --config build/webpack.dev.config.js",
     "web": "webpack --config build/webpack.build.config.js"
   },
-  "peerDependencies": {
+  "dependencies": {
     "vue": "^1.0.21",
+    "vue-touch": "^1.0.2",
     "framework7": "^1.4.2"
   },
   "devDependencies": {
-    "vue": "^1.0.21",
     "vue-router": "^0.7.13",
-    "framework7": "^1.4.2",
 
     "babel-core": "^6.7.6",
     "babel-plugin-transform-runtime": "^6.7.5",

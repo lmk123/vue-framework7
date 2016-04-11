@@ -21,8 +21,8 @@
         <input type="text" class="modal-text-input" v-model="promptValue"></div>
     </div>
     <div class="modal-buttons" :class="{'modal-buttons-1':type === 'alert','modal-buttons-2':type === 'confirm' || type === 'prompt'}">
-      <span class="modal-button" @click="$emit(type,false)" v-show="type === 'confirm' || type === 'prompt'">取消</span>
-      <span class="modal-button modal-button-bold" @click="$emit(type,true)">确定</span>
+      <span class="modal-button" v-touch:tap="$emit(type,false)" v-show="type === 'confirm' || type === 'prompt'">取消</span>
+      <span class="modal-button modal-button-bold" v-touch:tap="$emit(type,true)">确定</span>
     </div>
   </div>
 </template>
