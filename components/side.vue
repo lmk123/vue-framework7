@@ -9,9 +9,11 @@
 </template>
 
 <script type="text/babel">
+  import tap from './directives/tap';
   const { classList } = document.body;
 
   export default {
+    directives: { tap },
     props: {
       leftEffect: {
         type: String,

@@ -20,7 +20,9 @@
 </template>
 
 <script type="text/babel">
+  import tap from './directives/tap';
   export default {
+    directives: { tap },
     props: {
       placeholder: {
         type: String,
