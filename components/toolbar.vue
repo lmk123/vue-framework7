@@ -26,7 +26,7 @@
     },
     computed: {
       hasTabLabel() {
-        return this.tabbar && this.tabs[ 0 ].label;
+        return this.tabbar && this.tabs.length && this.tabs[ 0 ].label;
       }
     },
     ready() {
