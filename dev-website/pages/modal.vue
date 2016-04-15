@@ -2,11 +2,11 @@
   <f7-modal v-ref:modal></f7-modal>
   <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/modal.vue">Code is
               here.</a>
-  <button v-touch:tap="alert">Alert</button>
-  <button v-touch:tap="confirm">Confirm</button>
-  <button v-touch:tap="prompt">Prompt</button>
-  <button v-touch:tap="showPreloader">Preloader</button>
-  <button v-touch:tap="showIndicator">Indicator</button>
+  <button @click="alert">Alert</button>
+  <button @click="confirm">Confirm</button>
+  <button @click="prompt">Prompt</button>
+  <button @click="showPreloader">Preloader</button>
+  <button @click="showIndicator">Indicator</button>
 </template>
 
 <script type="text/babel">

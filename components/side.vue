@@ -1,5 +1,5 @@
 <template>
-  <div class="panel-overlay" v-touch:tap="hide"></div>
+  <div class="panel-overlay" v-tap="hide"></div>
   <div class="panel panel-left panel-{{leftEffect}}" v-if="left" transition="side">
     <slot name="left"></slot>
   </div>

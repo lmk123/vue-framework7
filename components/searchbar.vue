@@ -6,17 +6,17 @@
              v-model="value"
              v-el:input
              @focus="show">
-      <a class="searchbar-clear" v-touch:tap="clear"></a>
+      <a class="searchbar-clear" v-tap="clear"></a>
     </div>
     <a class="searchbar-cancel"
        style="display:block;"
        :style="{marginRight:active ? '0px' : '-53px'}"
        v-text="cancelText"
-       v-touch:tap="hide"
+       v-tap="hide"
        v-el:cancel></a>
   </form>
 
-  <div class="searchbar-overlay" :class="{'searchbar-overlay-active':active && !value}" v-touch:tap="hide"></div>
+  <div class="searchbar-overlay" :class="{'searchbar-overlay-active':active && !value}" v-tap="hide"></div>
 </template>
 
 <script type="text/babel">
