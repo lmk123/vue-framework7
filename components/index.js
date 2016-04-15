@@ -11,4 +11,6 @@ Vue.component( 'f7-navbar', require( './navbar.vue' ) );
 Vue.component( 'f7-toolbar', require( './toolbar.vue' ) );
 Vue.component( 'f7-searchbar', require( './searchbar.vue' ) );
 Vue.component( 'f7-side', require( './side.vue' ) );
+Vue.component( 'f7-row', require( './row.vue' ) );
+Vue.component( 'f7-col', require( './col.vue' ) );
 

@@ -5,4 +5,5 @@
   <a v-link="'/toolbar'">Toolbar</a><br/>
   <a v-link="'/content-block'">Content Block</a><br/>
   <a v-link="'/side'">Side Panels</a><br/>
+  <a v-link="'/grid'">Grid</a><br/>
 </template>

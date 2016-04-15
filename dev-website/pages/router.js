@@ -26,6 +26,9 @@ router.map( {
   },
   '/side': {
     component: require( './side.vue' )
+  },
+  '/grid': {
+    component: require( './grid.vue' )
   }
 } );
 
