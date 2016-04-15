@@ -7,6 +7,7 @@ config.plugins.push( new webpack.DefinePlugin( {
   'process.env.NODE_ENV': "'development'"
 } ) );
 config.devServer = {
+  host: '0.0.0.0',
   contentBase: './dist'
 };
 

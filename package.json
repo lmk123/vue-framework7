@@ -17,7 +17,8 @@
   },
   "scripts": {
     "start": "webpack-dev-server --inline --open --config build/webpack.dev.config.js",
-    "web": "webpack --config build/webpack.build.config.js"
+    "build": "webpack --config build/webpack.build.config.js",
+    "deploy": "npm run build && gh-pages -d dist -a"
   },
   "dependencies": {
     "vue": "^1.0.21",
@@ -25,6 +26,8 @@
     "framework7": "^1.4.2"
   },
   "devDependencies": {
+    "fs-extra": "^0.26.7",
+    "gh-pages": "^0.11.0",
     "vue-router": "^0.7.13",
 
     "babel-core": "^6.7.6",

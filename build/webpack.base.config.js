@@ -2,11 +2,13 @@ const webpack = require( 'webpack' ),
   HtmlWebpackPlugin = require( 'html-webpack-plugin' ),
   ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
 
+require( 'fs-extra' ).removeSync('./dist');
+
 module.exports = {
   entry: './dev-website/index',
   output: {
     path: './dist',
-    filename: '[name].js'
+    filename: '[name]-[hash:10].js'
   },
   module: {
     loaders: [
@@ -23,7 +25,7 @@ module.exports = {
         test: /\.(woff2?|ttf|png|svg)$/,
         loader: 'file-loader',
         query: {
-          name: '[name].[ext]'
+          name: '[name]-[hash:10].[ext]'
         }
       },
       {
@@ -45,7 +47,7 @@ module.exports = {
     new HtmlWebpackPlugin( {
       template: './dev-website/index.html'
     } ),
-    new ExtractTextPlugin( '[name].css' )
+    new ExtractTextPlugin( '[name]-[hash:10].css' )
   ]
 };
 
