@@ -7,4 +7,5 @@
   <a v-link="'/content-block'">Content Block</a><br/>
   <a v-link="'/side'">Side Panels</a><br/>
   <a v-link="'/grid'">Grid</a><br/>
+  <a v-link="'/popup'">Popup</a><br/>
 </template>

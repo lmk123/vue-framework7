@@ -32,6 +32,9 @@ router.map( {
   },
   '/grid': {
     component: require( './grid.vue' )
+  },
+  '/popup': {
+    component: require( './popup.vue' )
   }
 } );
 
