@@ -44,17 +44,17 @@
     transitions: {
       modal: {
         css: false,
-        beforeEnter: function ( el ) {
+        beforeEnter( el ) {
           el.style.display = 'block';
         },
-        enter: function ( el, done ) {
+        enter( el, done ) {
           setTimeout( ()=> { el.classList.add( 'modal-in' ); }, 0 );
           setTimeout( done, 400 ); // todo Use transitionEnd event
         },
-        beforeLeave: function ( el ) {
+        beforeLeave( el ) {
           el.classList.remove( 'modal-in' );
         },
-        leave: function ( el, done ) {
+        leave( el, done ) {
           el.classList.add( 'modal-out' );
           setTimeout( done, 400 ); // todo Use transitionEnd event
         }
