@@ -1,19 +1,18 @@
 <template>
-  <div class="pages" :class="classList">
+  <div class="pages" v-el:pages>
     <slot></slot>
   </div>
 </template>
 
 <script type="text/babel">
+  import { modifyClass } from './utils';
   export default {
-    data() {
-      return {
-        classList: []
-      }
-    },
     events: {
-      ['f7-pages-add-class']( className ) {
-        this.classList.push( className );
+      ['f7-pages-add-class']( classArray ) {
+        modifyClass( this.$els.pages, classArray, 'add' );
+      },
+      ['f7-pages-remove-class']( classArray ) {
+        modifyClass( this.$els.pages, classArray, 'remove' );
       }
     }
   };

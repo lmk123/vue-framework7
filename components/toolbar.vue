@@ -1,13 +1,7 @@
 <template>
-  <div class="toolbar" :class="{tabbar:tabbar,'tabbar-labels':hasTabLabel}">
+  <div class="toolbar">
     <div class="toolbar-inner">
-      <a v-link="tab.link" v-for="tab in tabs" :class="{link:!tabbar,'tab-link':tabbar,active:tab.active}">
-        <i class="icon" :class="tab.iconClass" v-if="tabbar && tab.iconClass">
-          <span v-if="tab.badge" class="badge" v-text="tab.badge"></span>
-        </i>
-        <span v-if="tabbar && tab.label" class="tabbar-label" v-text="tab.label"></span>
-        <span v-else v-text="tab.label"></span>
-      </a>
+      <a v-link="tab.link" v-for="tab in links" class="link" v-text="tab.label"></a>
     </div>
   </div>
 </template>
@@ -15,22 +9,35 @@
 <script type="text/babel">
   export default {
     props: {
-      tabbar: {
-        type: Boolean,
-        default: false
+      type: {
+        type: String,
+        default: 'static' // 'static' 'fixed' 'through'
       },
-      tabs: {
+      links: {
         type: Array,
         required: true
       }
     },
-    computed: {
-      hasTabLabel() {
-        return this.tabbar && this.tabs.length && this.tabs[ 0 ].label;
+    methods: {
+      show() {
+        if ( this.type === 'through' ) {
+          this.$root.$broadcast( 'f7-page-remove-class', 'no-toolbar' );
+        }
+      },
+      hide() {
+        if ( this.type === 'through' ) {
+          this.$root.$broadcast( 'f7-page-add-class', 'no-toolbar' );
+        }
       }
     },
     ready() {
-      this.$root.$broadcast( this.hasTabLabel ? 'f7-page-with-tabbar-labels' : 'f7-page-with-toolbar' );
+      const { type } = this;
+      const { $root } = this;
+      if ( type === 'fixed' ) {
+        $root.$broadcast( 'f7-page-add-class', 'toolbar-fixed' );
+      } else if ( type === 'through' ) {
+        $root.$broadcast( 'f7-pages-add-class', 'toolbar-through' );
+      }
     }
   };
 </script>

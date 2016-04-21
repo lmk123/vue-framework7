@@ -1,27 +1,18 @@
 <template>
-  <div class="page" :class="{'with-subnavbar':subNavbar,'toolbar-fixed':toolbar,'tabbar-labels-fixed':tabbarLabels}">
+  <div v-el:page class="page">
     <slot></slot>
   </div>
 </template>
 
 <script type="text/babel">
+  import { modifyClass } from './utils';
   export default {
-    data() {
-      return {
-        subNavbar: false,
-        toolbar: false,
-        tabbarLabels: false
-      };
-    },
     events: {
-      ['f7-page-with-subnavbar']() {
-        this.subNavbar = true;
+      ['f7-page-add-class']( classArray ) {
+        modifyClass( this.$els.page, classArray, 'add' );
       },
-      ['f7-page-with-toolbar']() {
-        this.toolbar = true;
-      },
-      ['f7-page-with-tabbar-labels']() {
-        this.tabbarLabels = true;
+      ['f7-page-remove-class']( classArray ) {
+        modifyClass( this.$els.page, classArray, 'remove' );
       }
     }
   };

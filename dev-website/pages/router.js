@@ -21,6 +21,9 @@ router.map( {
   '/toolbar': {
     component: require( './toolbar.vue' )
   },
+  '/tabbar': {
+    component: require( './tabbar.vue' )
+  },
   '/content-block': {
     component: require( './content-block.vue' )
   },

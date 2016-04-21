@@ -4,10 +4,11 @@
       <f7-pages>
         <f7-page>
           <f7-page-content>
-            <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/toolbar.vue">Code is
+            <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/toolbar.vue">Code
+              is
               here.</a>
           </f7-page-content>
-          <f7-toolbar :links="links"></f7-toolbar>
+          <f7-tabbar type="fixed" :tabs="tabs"></f7-tabbar>
         </f7-page>
       </f7-pages>
     </f7-view>
@@ -18,18 +19,24 @@
   export default {
     data() {
       return {
-        links: [
+        tabs: [
           {
-            label: 'link 1'
+            label: 'tab 1',
+            iconClass: 'demo-icon-1'
           },
           {
-            label: 'link 2'
+            label: 'tab 2',
+            iconClass: 'demo-icon-2',
+            badge: 5
           },
           {
-            label: 'link 3'
+            label: 'tab 3',
+            iconClass: 'demo-icon-3',
+            active: true
           },
           {
-            label: 'link 4'
+            label: 'tab 4',
+            iconClass: 'demo-icon-4'
           }
         ]
       };

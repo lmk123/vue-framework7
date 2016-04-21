@@ -27,12 +27,17 @@
     },
     ready() {
       const { type } = this;
-      if ( type !== 'static' ) {
-        this.$root.$broadcast( 'f7-pages-add-class', 'navbar-' + type );
+      const pageClassArray = [];
+      const { $root } = this;
+      if ( type === 'fixed' ) {
+        pageClassArray.push( 'navbar-fixed' );
+      } else if ( type === 'through' ) {
+        $root.$broadcast( 'f7-pages-add-class', 'navbar-through' );
       }
       if ( this._slotContents.subnavbar ) {
-        this.$root.$broadcast( 'f7-page-with-subnavbar' );
+        pageClassArray.push( 'with-subnavbar' );
       }
+      $root.$broadcast( 'f7-page-add-class', pageClassArray );
     }
   };
 </script>
