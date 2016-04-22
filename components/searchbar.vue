@@ -40,6 +40,10 @@
       onSearch: {
         type: Function,
         default() {}
+      },
+      onClear: {
+        type: Function,
+        default() {}
       }
     },
     data() {
@@ -57,6 +61,7 @@
       clear() {
         this.value = '';
         this.$nextTick( ()=> this.$els.input.focus() );
+        this.onClear();
       }
     }
   };
