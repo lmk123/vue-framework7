@@ -1,5 +1,5 @@
 <template>
-  <form class="searchbar searchbar-init" :class="{'searchbar-active':active,'searchbar-not-empty':!!value}">
+  <form class="searchbar searchbar-init" :class="{'searchbar-active':active,'searchbar-not-empty':!!value}" @submit.prevent="onSearch">
     <div class="searchbar-input">
       <input type="search"
              :placeholder="placeholder"
@@ -36,6 +36,10 @@
         twoWay: true,
         type: String,
         default: ''
+      },
+      onSearch: {
+        type: Function,
+        default() {}
       }
     },
     data() {
