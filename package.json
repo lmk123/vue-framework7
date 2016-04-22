@@ -18,7 +18,7 @@
   "scripts": {
     "start": "webpack-dev-server --inline --open --config build/webpack.dev.config.js",
     "build": "webpack --config build/webpack.build.config.js",
-    "deploy": "npm run build && gh-pages -d dist -a"
+    "deploy": "npm run build && npm pub && gh-pages -d dist -a"
   },
   "dependencies": {
     "vue": "^1.0.21",
