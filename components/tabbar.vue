@@ -1,5 +1,5 @@
 <template>
-  <div class="toolbar tabbar" :class="{'tabbar-labels':hasLabel}">
+  <div class="toolbar tabbar" v-show="isShow" :class="{'tabbar-labels':hasLabel}">
     <div class="toolbar-inner">
       <a class="tab-link" v-for="tab in tabs" v-link="tab.link" :class="{active:tab.active}">
         <i class="icon" :class="tab.iconClass">
@@ -23,6 +23,11 @@
         required: true
       }
     },
+    data() {
+      return {
+        isShow: true
+      };
+    },
     computed: {
       hasLabel() {
         return this.tabs.length && this.tabs[ 0 ].label;
@@ -30,13 +35,19 @@
     },
     methods: {
       show() {
+        this.isShow = true;
         if ( this.type === 'through' ) {
           this.$root.$broadcast( 'f7-page-remove-class', 'no-tabbar' );
+        } else if ( this.type === 'fixed' ) {
+          this.$root.$broadcast( 'f7-page-add-class', this.hasLabel ? 'tabbar-labels-fixed' : 'toolbar-fixed' );
         }
       },
       hide() {
+        this.isShow = false;
         if ( this.type === 'through' ) {
           this.$root.$broadcast( 'f7-page-add-class', 'no-tabbar' );
+        } else if ( this.type === 'fixed' ) {
+          this.$root.$broadcast( 'f7-page-remove-class', this.hasLabel ? 'tabbar-labels-fixed' : 'toolbar-fixed' );
         }
       }
     },

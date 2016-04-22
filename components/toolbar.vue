@@ -1,5 +1,5 @@
 <template>
-  <div class="toolbar">
+  <div class="toolbar" v-show="isShow">
     <div class="toolbar-inner">
       <a v-link="tab.link" v-for="tab in links" class="link" v-text="tab.label"></a>
     </div>
@@ -18,15 +18,26 @@
         required: true
       }
     },
+    data() {
+      return {
+        isShow: true
+      };
+    },
     methods: {
       show() {
+        this.isShow = true;
         if ( this.type === 'through' ) {
           this.$root.$broadcast( 'f7-page-remove-class', 'no-toolbar' );
+        } else if ( this.type === 'fixed' ) {
+          this.$root.$broadcast( 'f7-page-add-class', 'toolbar-fixed' );
         }
       },
       hide() {
+        this.isShow = false;
         if ( this.type === 'through' ) {
           this.$root.$broadcast( 'f7-page-add-class', 'no-toolbar' );
+        } else if ( this.type === 'fixed' ) {
+          this.$root.$broadcast( 'f7-page-remove-class', 'toolbar-fixed' );
         }
       }
     },

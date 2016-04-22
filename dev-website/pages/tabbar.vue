@@ -7,8 +7,10 @@
             <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/toolbar.vue">Code
               is
               here.</a>
+            <button @click="$refs.tabbar.hide">Hide tabbar</button>
+            <button @click="$refs.tabbar.show">Show tabbar</button>
           </f7-page-content>
-          <f7-tabbar type="fixed" :tabs="tabs"></f7-tabbar>
+          <f7-tabbar type="fixed" :tabs="tabs" v-ref:tabbar></f7-tabbar>
         </f7-page>
       </f7-pages>
     </f7-view>
