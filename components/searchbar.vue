@@ -12,7 +12,7 @@
        style="display:block;"
        :style="{marginRight:active ? '0px' : '-53px'}"
        v-text="cancelText"
-       v-tap="hide"
+       v-tap="cancel"
        v-el:cancel></a>
   </form>
 
@@ -44,6 +44,10 @@
       onClear: {
         type: Function,
         default() {}
+      },
+      onCancel: {
+        type: Function,
+        default() {}
       }
     },
     data() {
@@ -62,6 +66,11 @@
         this.value = '';
         this.$nextTick( ()=> this.$els.input.focus() );
         this.onClear();
+      },
+      cancel() {
+        this.value = '';
+        this.hide();
+        this.onCancel();
       }
     }
   };
