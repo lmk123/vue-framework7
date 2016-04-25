@@ -1,7 +1,7 @@
 <template>
   <div class="toolbar" v-show="isShow">
     <div class="toolbar-inner">
-      <a v-link="tab.link" v-for="tab in links" class="link" v-text="tab.label"></a>
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -12,10 +12,6 @@
       type: {
         type: String,
         default: 'static' // 'static' 'fixed' 'through'
-      },
-      links: {
-        type: Array,
-        required: true
       }
     },
     data() {
