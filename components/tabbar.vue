@@ -1,12 +1,7 @@
 <template>
   <div class="toolbar tabbar" v-show="isShow" :class="{'tabbar-labels':hasLabel}">
     <div class="toolbar-inner">
-      <a class="tab-link" v-for="tab in tabs" v-link="tab.link" :class="{active:tab.active}">
-        <i class="icon" :class="tab.iconClass">
-          <span v-if="tab.badge" class="badge" v-text="tab.badge"></span>
-        </i>
-        <span v-if="tab.label" class="tabbar-label" v-text="tab.label"></span>
-      </a>
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -18,20 +13,15 @@
         type: String,
         default: 'static' // 'static' 'fixed' 'through'
       },
-      tabs: {
-        type: Array,
-        required: true
+      hasLabel: {
+        type: Boolean,
+        default: false
       }
     },
     data() {
       return {
         isShow: true
       };
-    },
-    computed: {
-      hasLabel() {
-        return this.tabs.length && this.tabs[ 0 ].label;
-      }
     },
     methods: {
       show() {

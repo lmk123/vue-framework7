@@ -7,44 +7,43 @@
             <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/toolbar.vue">Code
               is
               here.</a>
+
             <button @click="$refs.tabbar.hide">Hide tabbar</button>
             <button @click="$refs.tabbar.show">Show tabbar</button>
           </f7-page-content>
-          <f7-tabbar type="fixed" :tabs="tabs" v-ref:tabbar></f7-tabbar>
+
+          <f7-tabbar type="fixed" has-label v-ref:tabbar>
+            <f7-tabbar-item>
+              <i class="icon demo-icon-1">
+                <f7-badge>4</f7-badge>
+              </i>
+              <f7-tabbar-label>tab 1</f7-tabbar-label>
+            </f7-tabbar-item>
+            <f7-tabbar-item>
+              <i class="icon demo-icon-2">
+                <f7-badge>9</f7-badge>
+              </i>
+              <f7-tabbar-label>tab 2</f7-tabbar-label>
+            </f7-tabbar-item>
+            <f7-tabbar-item>
+              <i class="icon demo-icon-3">
+                <f7-badge>2</f7-badge>
+              </i>
+              <f7-tabbar-label>tab 3</f7-tabbar-label>
+            </f7-tabbar-item>
+            <f7-tabbar-item>
+              <i class="icon demo-icon-4">
+                <f7-badge>7</f7-badge>
+              </i>
+              <f7-tabbar-label>tab 4</f7-tabbar-label>
+            </f7-tabbar-item>
+          </f7-tabbar>
+
         </f7-page>
       </f7-pages>
     </f7-view>
   </f7-views>
 </template>
-
-<script type="text/babel">
-  export default {
-    data() {
-      return {
-        tabs: [
-          {
-            label: 'tab 1',
-            iconClass: 'demo-icon-1'
-          },
-          {
-            label: 'tab 2',
-            iconClass: 'demo-icon-2',
-            badge: 5
-          },
-          {
-            label: 'tab 3',
-            iconClass: 'demo-icon-3',
-            active: true
-          },
-          {
-            label: 'tab 4',
-            iconClass: 'demo-icon-4'
-          }
-        ]
-      };
-    }
-  };
-</script>
 
 <style>
   i.demo-icon-1 { width: 30px; height: 30px; background-image: url("data:image/svg+xml;charset=utf-8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' fill='%23929292'><g><circle cx='15.2' cy='8.8' r='1.5'/><polygon points='16.7,12.3 16.7,11.7 16.7,11.3 13.7,11.3 13.7,12.3 14.7,12.3 14.7,20.3 13.7,20.3 13.7,21.3 17.7,21.3 17.7,20.3 16.7,20.3'/><path d='M15.2,2.3C8.3,2.3,2.7,7.9,2.7,14.8s5.6,12.5,12.5,12.5c6.9,0,12.5-5.6,12.5-12.5S22.1,2.3,15.2,2.3z M15.2,26.3 c-6.3,0-11.5-5.2-11.5-11.5S8.8,3.3,15.2,3.3s11.5,5.2,11.5,11.5S21.5,26.3,15.2,26.3z'/></g></svg>"); }
