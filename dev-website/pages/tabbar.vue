@@ -14,27 +14,27 @@
 
           <f7-tabbar type="fixed" has-label v-ref:tabbar>
             <f7-tabbar-item>
-              <i class="icon demo-icon-1">
+              <f7-icon class="demo-icon-1">
                 <f7-badge>4</f7-badge>
-              </i>
+              </f7-icon>
               <f7-tabbar-label>tab 1</f7-tabbar-label>
             </f7-tabbar-item>
             <f7-tabbar-item>
-              <i class="icon demo-icon-2">
+              <f7-icon class="demo-icon-2">
                 <f7-badge>9</f7-badge>
-              </i>
+              </f7-icon>
               <f7-tabbar-label>tab 2</f7-tabbar-label>
             </f7-tabbar-item>
             <f7-tabbar-item>
-              <i class="icon demo-icon-3">
+              <f7-icon class="demo-icon-3">
                 <f7-badge>2</f7-badge>
-              </i>
+              </f7-icon>
               <f7-tabbar-label>tab 3</f7-tabbar-label>
             </f7-tabbar-item>
             <f7-tabbar-item>
-              <i class="icon demo-icon-4">
+              <f7-icon class="demo-icon-4">
                 <f7-badge>7</f7-badge>
-              </i>
+              </f7-icon>
               <f7-tabbar-label>tab 4</f7-tabbar-label>
             </f7-tabbar-item>
           </f7-tabbar>

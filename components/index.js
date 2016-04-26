@@ -14,6 +14,7 @@ Vue.component( 'f7-tabbar', require( './tabbar.vue' ) );
 Vue.component( 'f7-tabbar-item', require( './tabbar-item.vue' ) );
 Vue.component( 'f7-tabbar-label', require( './tabbar-label.vue' ) );
 Vue.component( 'f7-badge', require( './badge.vue' ) );
+Vue.component( 'f7-icon', require( './icon.vue' ) );
 Vue.component( 'f7-searchbar', require( './searchbar.vue' ) );
 Vue.component( 'f7-side', require( './side.vue' ) );
 Vue.component( 'f7-row', require( './row.vue' ) );
