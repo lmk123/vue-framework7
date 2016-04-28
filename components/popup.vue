@@ -44,6 +44,9 @@
       hide() {
         this.isShow = false;
       }
+    },
+    ready() {
+      this.$appendTo( 'body' );
     }
   };
 </script>
