@@ -26,9 +26,7 @@
                 </f7-list-item>
                 <f7-list-item label>
                   <span slot="title">switch</span>
-                  <f7-checkbox slot="input">
-                    <input type="checkbox">
-                  </f7-checkbox>
+                  <f7-checkbox slot="input"></f7-checkbox>
                 </f7-list-item>
                 <f7-list-item label>
                   <span slot="title">slider</span>
@@ -46,44 +44,18 @@
             <f7-content-block-title>checkbox group</f7-content-block-title>
             <f7-list-block>
               <f7-list>
-                <f7-group-item>
-                  <input type="checkbox" name="group" slot="input">
-                  <span slot="title">name 1</span>
-                </f7-group-item>
-                <f7-group-item>
-                  <input type="checkbox" name="group" slot="input">
-                  <span slot="title">name 2</span>
-                </f7-group-item>
-                <f7-group-item>
-                  <input type="checkbox" name="group" slot="input">
-                  <span slot="title">name 3</span>
-                </f7-group-item>
-                <f7-group-item>
-                  <input type="checkbox" name="group" slot="input">
-                  <span slot="title">name 4</span>
-                </f7-group-item>
-              </f7-list>
-            </f7-list-block>
-
-            <f7-content-block-title>radio group</f7-content-block-title>
-            <f7-list-block>
-              <f7-list>
-                <f7-group-item type="radio">
-                  <input type="radio" name="group" slot="input">
-                  <span slot="title">name 1</span>
-                </f7-group-item>
-                <f7-group-item type="radio">
-                  <input type="radio" name="group" slot="input">
-                  <span slot="title">name 2</span>
-                </f7-group-item>
-                <f7-group-item type="radio">
-                  <input type="radio" name="group" slot="input">
-                  <span slot="title">name 3</span>
-                </f7-group-item>
-                <f7-group-item type="radio">
-                  <input type="radio" name="group" slot="input">
-                  <span slot="title">name 4</span>
-                </f7-group-item>
+                <f7-checkbox-item>
+                  name 1
+                </f7-checkbox-item>
+                <f7-checkbox-item>
+                  name 2
+                </f7-checkbox-item>
+                <f7-checkbox-item>
+                  name 3
+                </f7-checkbox-item>
+                <f7-checkbox-item>
+                  name 4
+                </f7-checkbox-item>
               </f7-list>
             </f7-list-block>
           </f7-page-content>
