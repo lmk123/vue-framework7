@@ -58,9 +58,37 @@
                 </f7-checkbox-item>
               </f7-list>
             </f7-list-block>
+
+            <f7-content-block-title>radio group</f7-content-block-title>
+            <f7-list-block>
+              <f7-radio-group :radios="radios" :value.sync="checked"></f7-radio-group>
+              <f7-list-label>
+                Your choose is: {{ checked }}
+              </f7-list-label>
+            </f7-list-block>
           </f7-page-content>
         </f7-page>
       </f7-pages>
     </f7-view>
   </f7-views>
 </template>
+
+<script type="text/babel">
+  export default {
+    data() {
+      return {
+        radios: [
+          {
+            value: 'hello',
+            title: 'radio 1'
+          },
+          {
+            value: 'world',
+            title: 'radio 2'
+          }
+        ],
+        checked: 'hello'
+      };
+    }
+  };
+</script>

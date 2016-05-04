@@ -43,5 +43,6 @@ Vue.component( 'f7-list-divider', require( './list/list-divider.vue' ) );
 Vue.component( 'f7-checkbox', require( './form/form-switch.vue' ) );
 Vue.component( 'f7-range', require( './form/form-slider.vue' ) );
 Vue.component( 'f7-checkbox-item', require( './form/checkbox-item.vue' ) );
+Vue.component( 'f7-radio-group', require( './form/radio-group.vue' ) );
 import f7Textarea from './form/textarea';
 Vue.directive( 'f7-textarea', f7Textarea );
