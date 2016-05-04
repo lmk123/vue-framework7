@@ -35,6 +35,9 @@ router.map( {
   },
   '/popup': {
     component: require( './popup.vue' )
+  },
+  '/list': {
+    component: require( './list.vue' )
   }
 } );
 
