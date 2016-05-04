@@ -26,8 +26,11 @@
                 </f7-list-item>
                 <f7-list-item label>
                   <span slot="title">switch</span>
-                  <f7-checkbox slot="input"></f7-checkbox>
+                  <f7-checkbox slot="input" value="f7-checkbox" :model="checkboxModel"></f7-checkbox>
                 </f7-list-item>
+                <f7-list-divider>
+                  checkbox model: {{ checkboxModel | json }}
+                </f7-list-divider>
                 <f7-list-item label>
                   <span slot="title">slider</span>
                   <f7-range slot="input">
@@ -45,7 +48,7 @@
             <f7-list-block>
               <f7-checkbox-group :checkboxes="checkboxes" :value.sync="checkedCheckboxesValue"></f7-checkbox-group>
               <f7-list-label>
-                Your choose is: {{ checkedCheckboxesValue }}
+                Your choose is: {{ checkedCheckboxesValue | json }}
               </f7-list-label>
             </f7-list-block>
 
@@ -67,6 +70,7 @@
   export default {
     data() {
       return {
+        checkboxModel: [ 'f7-checkbox' ],
         checkboxes: [
           {
             value: 'checkbox 1 value',
