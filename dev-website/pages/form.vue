@@ -43,27 +43,17 @@
 
             <f7-content-block-title>checkbox group</f7-content-block-title>
             <f7-list-block>
-              <f7-list>
-                <f7-checkbox-item>
-                  name 1
-                </f7-checkbox-item>
-                <f7-checkbox-item>
-                  name 2
-                </f7-checkbox-item>
-                <f7-checkbox-item>
-                  name 3
-                </f7-checkbox-item>
-                <f7-checkbox-item>
-                  name 4
-                </f7-checkbox-item>
-              </f7-list>
+              <f7-checkbox-group :checkboxes="checkboxes" :value.sync="checkedCheckboxesValue"></f7-checkbox-group>
+              <f7-list-label>
+                Your choose is: {{ checkedCheckboxesValue }}
+              </f7-list-label>
             </f7-list-block>
 
             <f7-content-block-title>radio group</f7-content-block-title>
             <f7-list-block>
-              <f7-radio-group :radios="radios" :value.sync="checked"></f7-radio-group>
+              <f7-radio-group :radios="radios" :value.sync="checkedRadioValue"></f7-radio-group>
               <f7-list-label>
-                Your choose is: {{ checked }}
+                Your choose is: {{ checkedRadioValue }}
               </f7-list-label>
             </f7-list-block>
           </f7-page-content>
@@ -77,17 +67,38 @@
   export default {
     data() {
       return {
+        checkboxes: [
+          {
+            value: 'checkbox 1 value',
+            title: 'checkbox 1'
+          },
+          {
+            value: 'checkbox 2 value',
+            title: 'checkbox 2'
+          },
+          {
+            value: 'checkbox 3 value',
+            title: 'checkbox 3 (disabled)',
+            disabled: true
+          }
+        ],
+        checkedCheckboxesValue: [ 'checkbox 1 value' ],
         radios: [
           {
-            value: 'hello',
+            value: 'radio 1 value',
             title: 'radio 1'
           },
           {
-            value: 'world',
+            value: 'radio 2 value',
             title: 'radio 2'
+          },
+          {
+            value: 'radio 3 value',
+            title: 'radio 3 (disabled)',
+            disabled: true
           }
         ],
-        checked: 'hello'
+        checkedRadioValue: 'radio 2 value'
       };
     }
   };
