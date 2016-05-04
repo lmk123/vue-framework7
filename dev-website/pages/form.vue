@@ -42,6 +42,28 @@
                 </f7-list-item>
               </f7-list>
             </f7-list-block>
+
+            <f7-content-block-title>checkbox group</f7-content-block-title>
+            <f7-list-block>
+              <f7-list>
+                <f7-checkbox-item>
+                  <input type="checkbox" name="group" slot="input">
+                  <span slot="title">name 1</span>
+                </f7-checkbox-item>
+                <f7-checkbox-item>
+                  <input type="checkbox" name="group" slot="input">
+                  <span slot="title">name 2</span>
+                </f7-checkbox-item>
+                <f7-checkbox-item>
+                  <input type="checkbox" name="group" slot="input">
+                  <span slot="title">name 3</span>
+                </f7-checkbox-item>
+                <f7-checkbox-item>
+                  <input type="checkbox" name="group" slot="input">
+                  <span slot="title">name 4</span>
+                </f7-checkbox-item>
+              </f7-list>
+            </f7-list-block>
           </f7-page-content>
         </f7-page>
       </f7-pages>
