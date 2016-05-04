@@ -38,6 +38,9 @@ router.map( {
   },
   '/list': {
     component: require( './list.vue' )
+  },
+  '/form': {
+    component: require( './form.vue' )
   }
 } );
 

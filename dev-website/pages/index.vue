@@ -9,4 +9,5 @@
   <a v-link="'/grid'">Grid</a><br/>
   <a v-link="'/popup'">Popup</a><br/>
   <a v-link="'/list'">List View</a><br/>
+  <a v-link="'/form'">Form Elements</a><br/>
 </template>

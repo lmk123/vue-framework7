@@ -39,3 +39,8 @@ Vue.component( 'f7-list', require( './list/list.vue' ) );
 Vue.component( 'f7-list-label', require( './list/list-label.vue' ) );
 Vue.component( 'f7-list-item', require( './list/list-item.vue' ) );
 Vue.component( 'f7-list-divider', require( './list/list-divider.vue' ) );
+
+Vue.component( 'f7-checkbox', require( './form/form-switch.vue' ) );
+Vue.component( 'f7-range', require( './form/form-slider.vue' ) );
+import f7Textarea from './form/textarea';
+Vue.directive( 'f7-textarea', f7Textarea );
