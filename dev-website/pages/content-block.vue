@@ -10,11 +10,13 @@
               Content block.
             </f7-content-block>
 
-            <f7-content-block title="I'm title.">
+            <f7-content-block-title>I'm title.</f7-content-block-title>
+            <f7-content-block>
               Content block with title.
             </f7-content-block>
 
-            <f7-content-block inner title="I'm inner content.">
+            <f7-content-block-title>I'm inner content.</f7-content-block-title>
+            <f7-content-block inner>
               Inner content block with title.
             </f7-content-block>
           </f7-page-content>
