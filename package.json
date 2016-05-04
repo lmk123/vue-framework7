@@ -1,6 +1,6 @@
 {
   "name": "vue-framework7",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description" : "Framework7 components built with Vue.js",
   "main": "./components/index.js",
   "keywords": [
