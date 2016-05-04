@@ -1,7 +1,7 @@
 <template>
   <li>
-    <label class="label-{{type}} item-content">
-      <slot name="input"></slot>
+    <label class="item-content" :class="{'label-checkbox':type === 'checkbox','label-radio':type === 'radio'}">
+      <slot name="input" v-el:input></slot>
       <div class="item-media" v-if="type === 'checkbox'"><i class="icon icon-form-checkbox"></i></div>
       <div class="item-inner">
         <div class="item-title">
@@ -14,11 +14,18 @@
 
 <script type="text/babel">
   export default {
-    props: {
-      type: { // 'checkbox' or 'radio'
-        type: String,
-        default: 'checkbox'
-      }
+    data() {
+      return {
+        type: null
+      };
+    },
+    ready() {
+      this.$nextTick( ()=> {
+        const input = this.$el.getElementsByTagName( 'input' )[ 0 ];
+        if ( input ) {
+          this.type = input.type;
+        }
+      } );
     }
   };
 </script>
