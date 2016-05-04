@@ -13,31 +13,35 @@
                 <f7-list-item>
                   <input type="text" placeholder="no title" slot="input">
                 </f7-list-item>
-                <f7-list-item label>
+                <f7-list-item disabled>
+                  <span slot="title">disabled input</span>
+                  <input type="text" placeholder="with title" slot="input">
+                </f7-list-item>
+                <f7-list-item>
                   <span slot="title">text input</span>
                   <input type="text" placeholder="with title" slot="input">
                 </f7-list-item>
-                <f7-list-item label>
+                <f7-list-item>
                   <span slot="title">select</span>
                   <select slot="input">
                     <option>1</option>
                     <option>2</option>
                   </select>
                 </f7-list-item>
-                <f7-list-item label>
+                <f7-list-item>
                   <span slot="title">switch</span>
                   <f7-checkbox slot="input" value="f7-checkbox" :model="checkboxModel"></f7-checkbox>
                 </f7-list-item>
                 <f7-list-divider>
                   checkbox model: {{ checkboxModel | json }}
                 </f7-list-divider>
-                <f7-list-item label>
+                <f7-list-item>
                   <span slot="title">slider</span>
                   <f7-range slot="input">
                     <input type="range" min="0" max="100" value="50">
                   </f7-range>
                 </f7-list-item>
-                <f7-list-item label>
+                <f7-list-item>
                   <span slot="title">textarea</span>
                   <textarea slot="input" v-f7-textarea></textarea>
                 </f7-list-item>
