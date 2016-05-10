@@ -43,10 +43,13 @@
       this.$appendTo( 'body' );
     },
     beforeDestroy() {
-      const {$els} = this;
-      const {body} = document;
+      const { $els } = this;
+      const { body } = document;
       for ( let key in $els ) {
-        body.removeChild( $els[ key ] );
+        const node = $els[ key ];
+        if ( node ) {
+          body.removeChild( $els[ key ] );
+        }
       }
     }
   };
