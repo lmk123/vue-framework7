@@ -1,6 +1,6 @@
 <template>
-  <div class="popup-overlay" :class="{'modal-overlay-visible':isShow}" @click="hide"></div>
-  <div class="popup" v-if="isShow" transition="popup">
+  <div v-el:a class="popup-overlay" :class="{'modal-overlay-visible':isShow}" @click="hide"></div>
+  <div v-el:b class="popup" v-if="isShow" transition="popup">
     <slot></slot>
   </div>
 </template>
@@ -41,6 +41,13 @@
     },
     ready() {
       this.$appendTo( 'body' );
+    },
+    beforeDestroy() {
+      const {$els} = this;
+      const {body} = document;
+      for ( let key in $els ) {
+        body.removeChild( $els[ key ] );
+      }
     }
   };
 </script>
