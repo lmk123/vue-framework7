@@ -1,11 +1,11 @@
 <template>
-  <li :class="{'item-link':link}">
+  <li :class="{'item-link':link,disabled:disabled}">
     <div class="item-content">
       <div class="item-media" v-if="_slotContents.media">
         <slot name="media"></slot>
       </div>
       <div class="item-inner">
-        <div class="item-title" :class="{label:label}">
+        <div class="item-title" v-if="_slotContents.title" :class="{label:_slotContents.input}">
           <slot name="title"></slot>
         </div>
         <div class="item-input" v-if="_slotContents.input">
@@ -26,7 +26,7 @@
         type: Boolean,
         default: false
       },
-      label: {
+      disabled: {
         type: Boolean,
         default: false
       }
