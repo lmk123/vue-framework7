@@ -35,7 +35,10 @@
     },
     ready() {
       if ( this._slotContents.input ) {
-        this.$els.label.classList.add( 'label' );
+        const { label } = this.$els;
+        if ( label ) {
+          label.classList.add( 'label' );
+        }
       }
     }
   };
