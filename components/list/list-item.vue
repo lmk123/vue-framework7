@@ -5,7 +5,9 @@
         <slot name="media"></slot>
       </div>
       <div class="item-inner">
-        <div class="item-title" v-if="_slotContents.title" :class="{label:_slotContents.input}">
+        <!-- 这里的 label 不能用这种方式添加,否则会造成 Android 下报错 -->
+        <!-- :class="{label:_slotContents.input}"-->
+        <div class="item-title" v-if="_slotContents.title" v-el:label>
           <slot name="title"></slot>
         </div>
         <div class="item-input" v-if="_slotContents.input">
@@ -29,6 +31,11 @@
       disabled: {
         type: Boolean,
         default: false
+      }
+    },
+    ready() {
+      if ( this._slotContents.input ) {
+        this.$els.label.classList.add( 'label' );
       }
     }
   };
