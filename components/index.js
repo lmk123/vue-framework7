@@ -50,3 +50,7 @@ Vue.directive( 'f7-textarea', f7Textarea );
 Vue.component( 'f7-button', require( './buttons/button.vue' ) );
 Vue.component( 'f7-buttons-row', require( './buttons/buttons-row.vue' ) );
 Vue.component( 'f7-list-button', require( './buttons/list-button.vue' ) );
+
+Vue.component( 'f7-actions', require( './action-sheet/actions.vue' ) );
+Vue.component( 'f7-action-group', require( './action-sheet/action-group.vue' ) );
+Vue.component( 'f7-action-button', require( './action-sheet/action-button.vue' ) );

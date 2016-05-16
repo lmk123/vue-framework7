@@ -44,6 +44,9 @@ router.map( {
   },
   '/buttons': {
     component: require( './buttons.vue' )
+  },
+  '/actions': {
+    component: require( './action-sheet.vue' )
   }
 } );
 
