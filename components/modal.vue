@@ -29,6 +29,7 @@
 
 <script type="text/babel">
   import tap from './directives/tap';
+  import { modalTransition } from './utils';
   export default {
     data() {
       return {
@@ -42,23 +43,7 @@
     },
     directives: { tap },
     transitions: {
-      modal: {
-        css: false,
-        beforeEnter( el ) {
-          el.style.display = 'block';
-        },
-        enter( el, done ) {
-          setTimeout( ()=> { el.classList.add( 'modal-in' ); }, 0 );
-          setTimeout( done, 400 ); // todo Use transitionEnd event
-        },
-        beforeLeave( el ) {
-          el.classList.remove( 'modal-in' );
-        },
-        leave( el, done ) {
-          el.classList.add( 'modal-out' );
-          setTimeout( done, 400 ); // todo Use transitionEnd event
-        }
-      }
+      modal: modalTransition
     },
     methods: {
 
