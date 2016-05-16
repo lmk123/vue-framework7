@@ -61,7 +61,7 @@ export const modalMixin = {
     for ( let key in $els ) {
       const node = $els[ key ];
       if ( node ) {
-        body.removeChild( $els[ key ] );
+        body.removeChild( node );
       }
     }
   }
