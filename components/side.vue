@@ -1,5 +1,5 @@
 <template>
-  <div class="panel-overlay" v-tap="hide"></div>
+  <div class="panel-overlay" @click="hide"></div>
   <div class="panel panel-left panel-{{leftEffect}}" v-if="left" transition="side">
     <slot name="left"></slot>
   </div>
@@ -9,11 +9,9 @@
 </template>
 
 <script type="text/babel">
-  import tap from './directives/tap';
   const { classList } = document.body;
 
   export default {
-    directives: { tap },
     props: {
       leftEffect: {
         type: String,
