@@ -1,6 +1,6 @@
 {
   "name": "vue-framework7",
-  "version": "0.0.15",
+  "version": "0.1.0",
   "description" : "Framework7 components built with Vue.js",
   "main": "./components/index.js",
   "keywords": [
@@ -21,10 +21,10 @@
     "deploy": "npm run build && npm pub && gh-pages -d dist -a"
   },
   "dependencies": {
-    "vue": "^1.0.21",
     "framework7": "^1.4.2"
   },
   "devDependencies": {
+    "vue": "^1.0.21",
     "fs-extra": "^0.30.0",
     "gh-pages": "^0.11.0",
     "fastclick": "^1.0.6",
