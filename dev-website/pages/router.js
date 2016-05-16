@@ -41,6 +41,9 @@ router.map( {
   },
   '/form': {
     component: require( './form.vue' )
+  },
+  '/buttons': {
+    component: require( './buttons.vue' )
   }
 } );
 

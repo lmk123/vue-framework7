@@ -10,4 +10,5 @@
   <a v-link="'/popup'">Popup</a><br/>
   <a v-link="'/list'">List View</a><br/>
   <a v-link="'/form'">Form Elements</a><br/>
+  <a v-link="'/buttons'">Buttons</a><br/>
 </template>

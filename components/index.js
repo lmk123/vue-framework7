@@ -46,3 +46,7 @@ Vue.component( 'f7-checkbox-group', require( './form/checkbox-group.vue' ) );
 Vue.component( 'f7-radio-group', require( './form/radio-group.vue' ) );
 import f7Textarea from './form/textarea';
 Vue.directive( 'f7-textarea', f7Textarea );
+
+Vue.component( 'f7-button', require( './buttons/button.vue' ) );
+Vue.component( 'f7-buttons-row', require( './buttons/buttons-row.vue' ) );
+Vue.component( 'f7-list-button', require( './buttons/list-button.vue' ) );
