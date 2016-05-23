@@ -24,7 +24,6 @@ export const transitionEnd = (()=> {
  */
 export const oneTransitionEnd = transitionEnd ? function ( el, handler ) {
   el.addEventListener( transitionEnd, function h( e ) {
-    console.log('call transitionend');
     handler.call( el, e );
     el.removeEventListener( transitionEnd, h );
   } )
