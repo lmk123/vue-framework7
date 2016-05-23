@@ -1,4 +1,38 @@
 /**
+ * 当前浏览器的 ontransitionend 事件的名字
+ * @type {String}
+ */
+export const transitionEnd = (()=> {
+  const { style } = document.createElement( 'div' ),
+    transitions = {
+      'transition': 'transitionend',
+      'OTransition': 'otransitionend',
+      'MozTransition': 'transitionend',
+      'WebkitTransition': 'webkitTransitionEnd'
+    };
+  for ( let key in transitions ) {
+    if ( style[ key ] !== undefined ) {
+      return transitions[ key ];
+    }
+  }
+})();
+
+/**
+ * 当 el 上触发 transitionend 事件时调用一次 handler
+ * @param {Element} el
+ * @param {Function} handler
+ */
+export const oneTransitionEnd = transitionEnd ? function ( el, handler ) {
+  el.addEventListener( transitionEnd, function h( e ) {
+    console.log('call transitionend');
+    handler.call( el, e );
+    el.removeEventListener( transitionEnd, h );
+  } )
+} : function ( el, handler ) {
+  setTimeout( ()=> handler.call( el ), 400 );
+};
+
+/**
  * 批量操作一个元素的 classList
  * @param {Element} el
  * @param {String|String[]} classArray - 一个或多个类名
@@ -21,14 +55,14 @@ export const modalTransition = {
   },
   enter( el, done ) {
     setTimeout( ()=> { el.classList.add( 'modal-in' ); }, 0 );
-    setTimeout( done, 400 ); // todo Use transitionEnd event
+    oneTransitionEnd( el, done );
   },
   beforeLeave( el ) {
     el.classList.remove( 'modal-in' );
   },
   leave( el, done ) {
     el.classList.add( 'modal-out' );
-    setTimeout( done, 400 ); // todo Use transitionEnd event
+    oneTransitionEnd( el, done );
   }
 };
 

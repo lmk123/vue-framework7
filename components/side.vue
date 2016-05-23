@@ -9,7 +9,8 @@
 </template>
 
 <script type="text/babel">
-  const { classList } = document.body;
+  import { oneTransitionEnd } from './utils';
+  const { body } = document, { classList } = body;
 
   export default {
     props: {
@@ -39,7 +40,7 @@
           setTimeout( ()=> {
             classList.add( `with-panel-${panel}-${this[ `${panel}Effect` ]}` );
           }, 0 );
-          setTimeout( done, 400 ); // todo Use transitionEnd event
+          oneTransitionEnd( body, done );
         },
         beforeLeave( el ) {
           const panel = el.classList.contains( 'panel-left' ) ? 'left' : 'right';
@@ -47,7 +48,7 @@
         },
         leave( el, done ) {
           classList.add( 'panel-closing' );
-          setTimeout( done, 400 ); // todo Use transitionEnd event
+          oneTransitionEnd( body, done );
         },
         afterLeave() {
           classList.remove( 'panel-closing' );
