@@ -48,3 +48,28 @@
     }
   };
 </script>
+
+<!-- hide-on-scroll 代码片段 -->
+<!--
+(function () {
+  var page = document.querySelector( '.page' ),
+    toolbar = document.querySelector( '.toolbar' );
+
+  function hide() {
+    page.classList.add( 'no-toolbar-by-scroll' );
+    toolbar.classList.add( 'toolbar-hidden' );
+  }
+
+  function show() {
+    page.classList.remove( 'no-toolbar-by-scroll' );
+    toolbar.classList.remove( 'toolbar-hidden' );
+    toolbar.classList.add( 'toolbar-hiding' );
+    setTimeout( function () {
+      toolbar.classList.remove( 'toolbar-hiding' );
+    }, 400 );
+  }
+
+  hide();
+  setTimeout( show, 2000 );
+})();
+-->
