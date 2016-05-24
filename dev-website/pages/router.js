@@ -47,6 +47,9 @@ router.map( {
   },
   '/actions': {
     component: require( './action-sheet.vue' )
+  },
+  '/picker': {
+    component: require( './picker.vue' )
   }
 } );
 

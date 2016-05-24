@@ -55,5 +55,8 @@ export default {
     Vue.component( 'f7-actions', require( './action-sheet/actions.vue' ) );
     Vue.component( 'f7-action-group', require( './action-sheet/action-group.vue' ) );
     Vue.component( 'f7-action-button', require( './action-sheet/action-button.vue' ) );
+
+    Vue.component( 'f7-picker', require( './picker/picker.vue' ) );
+    Vue.component( 'f7-picker-inner', require( './picker/picker-inner.vue' ) );
   }
 };

@@ -30,7 +30,7 @@
  - [ ] [Popover](http://framework7.io/docs/popover.html)
  - [x] [Action Sheet](http://framework7.io/docs/action-sheet.html) ([Demo](http://f7.limingkai.cn/#!/actions))
  - [ ] [Login Screen](http://framework7.io/docs/login-screen.html)
- - [ ] [Picker Modal](http://framework7.io/docs/picker-modal.html)
+ - [x] [Picker Modal](http://framework7.io/docs/picker-modal.html) ([Demo](http://f7.limingkai.cn/#!/picker))
  - [ ] [Preloader Indicator](http://framework7.io/docs/preloader.html)
  - [ ] [Progress Bar](http://framework7.io/docs/progressbar.html)
 
