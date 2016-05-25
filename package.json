@@ -1,7 +1,7 @@
 {
   "name": "vue-framework7",
   "version": "0.1.1",
-  "description" : "Framework7 components built with Vue.js",
+  "description": "Framework7 components built with Vue.js",
   "main": "./components/index.js",
   "keywords": [
     "vue",
@@ -45,6 +45,7 @@
     "html-webpack-plugin": "^2.14.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "webpack-dev-server": "^1.14.1",
+    "openpack": "^1.0.0",
     "webpack": "^1.12.14"
   },
   "author": "Milk Lee <milk.lee@qq.com>",
