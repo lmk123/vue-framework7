@@ -16,7 +16,8 @@
       <f7-pages>
         <f7-page>
           <f7-page-content>
-            <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/side.vue">Code is
+            <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/side.vue">Code
+              is
               here.</a>
             <f7-content-block>
               <button @click="showLeft">Left side with "reveal" effect.</button>
@@ -32,10 +33,10 @@
 <script type="text/babel">
   export default {
     methods: {
-      showLeft() {this.$refs.side.showLeft();},
-      hideLeft() {this.$refs.side.hideLeft();},
-      hideRight() {this.$refs.side.hideRight();},
-      showRight() {this.$refs.side.showRight();}
+      showLeft () { this.$refs.side.showLeft() },
+      hideLeft () { this.$refs.side.hideLeft() },
+      hideRight () { this.$refs.side.hideRight() },
+      showRight () { this.$refs.side.showRight() }
     }
-  };
+  }
 </script>

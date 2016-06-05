@@ -1,56 +1,56 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
+import Vue from 'vue'
+import VueRouter from 'vue-router'
 
-Vue.use( VueRouter );
+Vue.use(VueRouter)
 
-const router = new VueRouter();
+const router = new VueRouter()
 
-router.map( {
+router.map({
   '/': {
-    component: require( './index.vue' )
+    component: require('./index.vue')
   },
   '/modal': {
-    component: require( './modal.vue' )
+    component: require('./modal.vue')
   },
   '/navbar': {
-    component: require( './navbar.vue' )
+    component: require('./navbar.vue')
   },
   '/searchbar': {
-    component: require( './searchbar.vue' )
+    component: require('./searchbar.vue')
   },
   '/toolbar': {
-    component: require( './toolbar.vue' )
+    component: require('./toolbar.vue')
   },
   '/tabbar': {
-    component: require( './tabbar.vue' )
+    component: require('./tabbar.vue')
   },
   '/content-block': {
-    component: require( './content-block.vue' )
+    component: require('./content-block.vue')
   },
   '/side': {
-    component: require( './side.vue' )
+    component: require('./side.vue')
   },
   '/grid': {
-    component: require( './grid.vue' )
+    component: require('./grid.vue')
   },
   '/popup': {
-    component: require( './popup.vue' )
+    component: require('./popup.vue')
   },
   '/list': {
-    component: require( './list.vue' )
+    component: require('./list.vue')
   },
   '/form': {
-    component: require( './form.vue' )
+    component: require('./form.vue')
   },
   '/buttons': {
-    component: require( './buttons.vue' )
+    component: require('./buttons.vue')
   },
   '/actions': {
-    component: require( './action-sheet.vue' )
+    component: require('./action-sheet.vue')
   },
   '/picker': {
-    component: require( './picker.vue' )
+    component: require('./picker.vue')
   }
-} );
+})
 
-export default router;
+export default router

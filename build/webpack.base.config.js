@@ -1,8 +1,7 @@
-const webpack = require( 'webpack' ),
-  HtmlWebpackPlugin = require( 'html-webpack-plugin' ),
-  ExtractTextPlugin = require( 'extract-text-webpack-plugin' );
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-require( 'fs-extra' ).removeSync('./dist');
+require('fs-extra').removeSync('./dist')
 
 module.exports = {
   entry: './dev-website/index',
@@ -15,11 +14,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: [ 'es2015', 'stage-3' ],
-          plugins: [ 'transform-runtime' ]
-        }
+        loader: 'babel-loader'
       },
       {
         test: /\.(woff2?|ttf|png|svg)$/,
@@ -34,20 +29,20 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract( 'style-loader', 'css-loader?sourceMap' )
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader?sourceMap')
       }
     ]
   },
   vue: {
     loaders: {
-      css: ExtractTextPlugin.extract( 'css-loader?sourceMap' )
+      css: ExtractTextPlugin.extract('css-loader?sourceMap')
     }
   },
   plugins: [
-    new HtmlWebpackPlugin( {
+    new HtmlWebpackPlugin({
       template: './dev-website/index.html'
-    } ),
-    new ExtractTextPlugin( '[name]-[hash:10].css' )
+    }),
+    new ExtractTextPlugin('[name]-[hash:10].css')
   ]
-};
+}
 

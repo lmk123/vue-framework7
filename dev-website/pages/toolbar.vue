@@ -4,7 +4,8 @@
       <f7-pages>
         <f7-page>
           <f7-page-content>
-            <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/toolbar.vue">Code is
+            <a target="_blank"
+               href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/toolbar.vue">Code is
               here.</a>
             <button @click="$refs.toolbar.hide">Hide toolbar</button>
             <button @click="$refs.toolbar.show">Show toolbar</button>

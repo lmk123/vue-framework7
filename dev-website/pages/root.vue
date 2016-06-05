@@ -7,9 +7,9 @@
   export default {
     replace: false,
     components: {
-      'fork-me': require( '../components/fork.vue' )
+      'fork-me': require('../components/fork.vue')
     }
-  };
+  }
 </script>
 
 <style>

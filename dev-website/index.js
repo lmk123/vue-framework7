@@ -1,11 +1,11 @@
-import f7Plugin from '../components';
-import Vue from 'vue';
+import f7Plugin from '../src'
+import Vue from 'vue'
 
-Vue.use( f7Plugin );
+Vue.use(f7Plugin)
 
-import router from './pages/router';
+import router from './pages/router'
 
-router.start( require( './pages/root.vue' ), 'body' );
+router.start(require('./pages/root.vue'), 'body')
 
-import fastClick from 'fastclick';
-fastClick.attach( document.body );
+import fastClick from 'fastclick'
+fastClick.attach(document.body)

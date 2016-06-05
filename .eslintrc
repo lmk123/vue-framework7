@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    "html"
+  ],
+  "extends": [
+    "standard"
+  ]
+}

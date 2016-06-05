@@ -4,7 +4,8 @@
       <f7-pages>
         <f7-page>
           <f7-page-content>
-            <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/buttons.vue">Code
+            <a target="_blank"
+               href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/buttons.vue">Code
               is
               here.</a>
             <f7-content-block>

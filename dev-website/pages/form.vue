@@ -72,9 +72,9 @@
 
 <script type="text/babel">
   export default {
-    data() {
+    data () {
       return {
-        checkboxModel: [ 'f7-checkbox' ],
+        checkboxModel: ['f7-checkbox'],
         checkboxes: [
           {
             value: 'checkbox 1 value',
@@ -90,7 +90,7 @@
             disabled: true
           }
         ],
-        checkedCheckboxesValue: [ 'checkbox 1 value' ],
+        checkedCheckboxesValue: ['checkbox 1 value'],
         radios: [
           {
             value: 'radio 1 value',
@@ -107,7 +107,7 @@
           }
         ],
         checkedRadioValue: 'radio 2 value'
-      };
+      }
     }
-  };
+  }
 </script>
