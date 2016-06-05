@@ -11,7 +11,8 @@
 </template>
 
 <script type="text/babel">
-  import { modalMixin } from '../utils'
+  import m from '../_mixins/modal'
+  import i from '../_mixins/insert-to-body'
   const { classList } = document.body
 
   export default {
@@ -36,6 +37,6 @@
         classList.remove('picker-modal-closing')
       }
     },
-    mixins: [modalMixin]
+    mixins: [m, i]
   }
 </script>

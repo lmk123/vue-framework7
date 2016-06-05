@@ -9,7 +9,7 @@
 </template>
 
 <script type="text/babel">
-  import { oneTransitionEnd } from './utils'
+  import oneTransitionEnd from './_utils/one-transition-end'
   const { body } = document
   const { classList } = body
 

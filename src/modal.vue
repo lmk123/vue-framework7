@@ -30,7 +30,7 @@
 </template>
 
 <script type="text/babel">
-  import { modalTransition } from './utils'
+  import modalTransition from './_mixins/modal-transition'
   export default {
     name: 'f7-modal',
     data () {
@@ -43,9 +43,7 @@
         text: ''
       }
     },
-    transitions: {
-      modal: modalTransition
-    },
+    mixins: [modalTransition],
     methods: {
       /**
        * 弹出一个警告框

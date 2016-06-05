@@ -5,7 +5,7 @@
 </template>
 
 <script type="text/babel">
-  import { modifyClass } from './utils'
+  import modifyClass from './_utils/modify-class'
   export default {
     name: 'f7-page',
     events: {

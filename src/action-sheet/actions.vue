@@ -6,7 +6,8 @@
 </template>
 
 <script type="text/babel">
-  import { modalMixin } from '../utils'
+  import m from '../_mixins/modal'
+  import i from '../_mixins/insert-to-body'
   export default {
     name: 'f7-actions',
     events: {
@@ -14,6 +15,6 @@
         this.hide()
       }
     },
-    mixins: [modalMixin]
+    mixins: [m, i]
   }
 </script>
