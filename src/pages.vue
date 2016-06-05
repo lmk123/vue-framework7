@@ -7,6 +7,7 @@
 <script type="text/babel">
   import { modifyClass } from './utils'
   export default {
+    name: 'f7-pages',
     events: {
       'f7-pages-add-class' (classArray) {
         modifyClass(this.$els.pages, classArray, 'add')

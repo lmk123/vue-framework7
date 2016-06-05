@@ -6,6 +6,7 @@
 
 <script type="text/babel">
   export default {
+    name: 'f7-col',
     props: ['col', 'tablet'],
     ready () {
       const { classList } = this.$els.col

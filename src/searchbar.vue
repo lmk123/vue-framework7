@@ -22,6 +22,7 @@
 
 <script type="text/babel">
   export default {
+    name: 'f7-searchbar',
     props: {
       placeholder: {
         type: String,

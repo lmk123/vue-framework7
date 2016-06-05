@@ -9,14 +9,14 @@
               is
               here.</a>
             <f7-actions v-ref:action>
-              <f7-action-group>
+              <f7-actions-group>
                 <f7-action-button>button 1</f7-action-button>
                 <f7-action-button>button 2</f7-action-button>
-              </f7-action-group>
-              <f7-action-group title="group title">
+              </f7-actions-group>
+              <f7-actions-group title="group title">
                 <f7-action-button>button 1</f7-action-button>
                 <f7-action-button>button 2</f7-action-button>
-              </f7-action-group>
+              </f7-actions-group>
             </f7-actions>
 
             <f7-content-block>

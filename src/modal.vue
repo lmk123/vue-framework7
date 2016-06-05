@@ -32,11 +32,12 @@
 <script type="text/babel">
   import { modalTransition } from './utils'
   export default {
+    name: 'f7-modal',
     data () {
       return {
         show: false,
         showIndic: false,
-        type: 'confirm',
+        type: null,
         promptValue: '',
         title: '',
         text: ''
@@ -60,7 +61,7 @@
         return new Promise(resolve => {
           this.$once('alert', () => {
             this.show = false
-            resolve()
+            this.$nextTick(() => resolve())
           })
         })
       },
@@ -79,7 +80,7 @@
         return new Promise(resolve => {
           this.$once('confirm', ok => {
             this.show = false
-            resolve(ok)
+            this.$nextTick(() => resolve(ok))
           })
         })
       },
@@ -98,8 +99,8 @@
         return new Promise(resolve => {
           this.$once('prompt', ok => {
             this.show = false
-            resolve(ok ? this.promptValue : null)
             this.promptValue = ''
+            this.$nextTick(() => resolve(ok ? this.promptValue : null))
           })
         })
       },

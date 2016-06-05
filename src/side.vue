@@ -14,6 +14,7 @@
   const { classList } = body
 
   export default {
+    name: 'f7-side',
     props: {
       leftEffect: {
         type: String,

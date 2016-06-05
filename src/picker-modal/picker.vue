@@ -15,6 +15,7 @@
   const { classList } = document.body
 
   export default {
+    name: 'f7-picker-modal',
     props: {
       hideBar: {
         type: Boolean,

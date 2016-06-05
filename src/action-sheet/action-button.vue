@@ -6,6 +6,7 @@
 
 <script type="text/babel">
   export default {
+    name: 'f7-action-button',
     props: {
       bold: {
         type: Boolean,

@@ -58,7 +58,7 @@
 
             <f7-content-block-title>radio group</f7-content-block-title>
             <f7-list-block>
-              <f7-radio-group :radios="radios" :value.sync="checkedRadioValue"></f7-radio-group>
+              <f7-radios-group :radios="radios" :value.sync="checkedRadioValue"></f7-radios-group>
               <f7-list-label>
                 Your choose is: {{ checkedRadioValue }}
               </f7-list-label>

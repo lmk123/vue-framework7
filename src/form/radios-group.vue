@@ -13,6 +13,7 @@
 
 <script type="text/babel">
   export default {
+    name: 'f7-radios-group',
     props: {
       radios: {
         type: Array,

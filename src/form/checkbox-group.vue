@@ -14,6 +14,7 @@
 
 <script type="text/babel">
   export default {
+    name: 'f7-checkbox-group',
     props: {
       checkboxes: {
         type: Array,

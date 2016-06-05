@@ -23,6 +23,7 @@
 
 <script type="text/babel">
   export default {
+    name: 'f7-list-item',
     props: {
       link: {
         type: Boolean,

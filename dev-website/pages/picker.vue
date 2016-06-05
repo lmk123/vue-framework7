@@ -8,13 +8,13 @@
               is
               here.</a>
 
-            <f7-picker v-ref:picker>
-              <f7-picker-inner>
+            <f7-picker-modal v-ref:picker>
+              <f7-picker-modal-inner>
                 <f7-content-block>
                   Hi.
                 </f7-content-block>
-              </f7-picker-inner>
-            </f7-picker>
+              </f7-picker-modal-inner>
+            </f7-picker-modal>
 
             <f7-content-block title="normal row">
               <p>

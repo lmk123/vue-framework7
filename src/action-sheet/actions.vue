@@ -8,6 +8,7 @@
 <script type="text/babel">
   import { modalMixin } from '../utils'
   export default {
+    name: 'f7-actions',
     events: {
       'hide-action-sheet' () {
         this.hide()

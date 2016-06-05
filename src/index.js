@@ -1,60 +1,116 @@
 import f7Textarea from './form/textarea'
 
+import Modal from './modal.vue'
+
+import ContentBlock from './content-block/content-block.vue'
+import ContentBlockTitle from './content-block/content-block-title.vue'
+
+import Views from './views.vue'
+import View from './view.vue'
+import Pages from './pages.vue'
+import Page from './page.vue'
+import PageContent from './page-content.vue'
+
+import Navbar from './navbar.vue'
+
+import Toolbar from './toolbar/toolbar.vue'
+import ToolbarItem from './toolbar/toolbar-item.vue'
+
+import Tabbar from './tabbar/tabbar.vue'
+import TabbarItem from './tabbar/tabbar-item.vue'
+import TabbarLabel from './tabbar/tabbar-label.vue'
+
+import Badge from './badge.vue'
+import Icon from './icon.vue'
+
+import Searchbar from './searchbar.vue'
+
+import Side from './side.vue'
+
+import Row from './grid/row.vue'
+import Col from './grid/col.vue'
+
+import Popup from './popup.vue'
+
+import List from './list/list.vue'
+import ListBlock from './list/list-block.vue'
+import ListItem from './list/list-item.vue'
+import ListGroup from './list/list-group.vue'
+import ListGroupTitle from './list/list-group-title.vue'
+import ListDivider from './list/list-divider.vue'
+import ListLabel from './list/list-label.vue'
+
+import Checkbox from './form/form-switch.vue'
+import CheckboxGroup from './form/checkbox-group.vue'
+import Range from './form/form-slider.vue'
+import RadiosGroup from './form/radios-group.vue'
+
+import Button from './buttons/button.vue'
+import ButtonsRow from './buttons/buttons-row.vue'
+import ListButton from './buttons/list-button.vue'
+
+import Actions from './action-sheet/actions.vue'
+import ActionButton from './action-sheet/action-button.vue'
+import ActionsGroup from './action-sheet/actions-group.vue'
+
+import PickerModal from './picker-modal/picker.vue'
+import PickerModalInner from './picker-modal/picker-inner.vue'
+
 export default function (Vue) {
-  Vue.component('f7-modal', require('./modal.vue'))
+  Vue.component(Modal.name, Modal)
 
-  Vue.component('f7-content-block', require('./content-block/content-block.vue'))
-  Vue.component('f7-content-block-title', require('./content-block/content-block-title.vue'))
+  Vue.component(ContentBlock.name, ContentBlock)
+  Vue.component(ContentBlockTitle.name, ContentBlockTitle)
 
-  Vue.component('f7-views', require('./views.vue'))
-  Vue.component('f7-view', require('./view.vue'))
-  Vue.component('f7-pages', require('./pages.vue'))
-  Vue.component('f7-page', require('./page.vue'))
-  Vue.component('f7-page-content', require('./page-content.vue'))
+  Vue.component(Views.name, Views)
+  Vue.component(View.name, View)
+  Vue.component(Pages.name, Pages)
+  Vue.component(Page.name, Page)
+  Vue.component(PageContent.name, PageContent)
 
-  Vue.component('f7-navbar', require('./navbar.vue'))
+  Vue.component(Navbar.name, Navbar)
 
-  Vue.component('f7-toolbar', require('./toolbar/toolbar.vue'))
-  Vue.component('f7-toolbar-item', require('./toolbar/toolbar-item.vue'))
+  Vue.component(Toolbar.name, Toolbar)
+  Vue.component(ToolbarItem.name, ToolbarItem)
 
-  Vue.component('f7-tabbar', require('./tabbar/tabbar.vue'))
-  Vue.component('f7-tabbar-item', require('./tabbar/tabbar-item.vue'))
-  Vue.component('f7-tabbar-label', require('./tabbar/tabbar-label.vue'))
+  Vue.component(Tabbar.name, Tabbar)
+  Vue.component(TabbarItem.name, TabbarItem)
+  Vue.component(TabbarLabel.name, TabbarLabel)
 
-  Vue.component('f7-badge', require('./badge.vue'))
-  Vue.component('f7-icon', require('./icon.vue'))
+  Vue.component(Badge.name, Badge)
+  Vue.component(Icon.name, Icon)
 
-  Vue.component('f7-searchbar', require('./searchbar.vue'))
+  Vue.component(Searchbar.name, Searchbar)
 
-  Vue.component('f7-side', require('./side.vue'))
+  Vue.component(Side.name, Side)
 
-  Vue.component('f7-row', require('./grid/row.vue'))
-  Vue.component('f7-col', require('./grid/col.vue'))
+  Vue.component(Row.name, Row)
+  Vue.component(Col.name, Col)
 
-  Vue.component('f7-popup', require('./popup.vue'))
+  Vue.component(Popup.name, Popup)
 
-  Vue.component('f7-list-block', require('./list/list-block.vue'))
-  Vue.component('f7-list-group', require('./list/list-group.vue'))
-  Vue.component('f7-list-group-title', require('./list/list-group-title.vue'))
-  Vue.component('f7-list', require('./list/list.vue'))
-  Vue.component('f7-list-label', require('./list/list-label.vue'))
-  Vue.component('f7-list-item', require('./list/list-item.vue'))
-  Vue.component('f7-list-divider', require('./list/list-divider.vue'))
+  Vue.component(List.name, List)
+  Vue.component(ListBlock.name, ListBlock)
+  Vue.component(ListGroup.name, ListGroup)
+  Vue.component(ListGroupTitle.name, ListGroupTitle)
+  Vue.component(ListLabel.name, ListLabel)
+  Vue.component(ListItem.name, ListItem)
+  Vue.component(ListDivider.name, ListDivider)
 
-  Vue.component('f7-checkbox', require('./form/form-switch.vue'))
-  Vue.component('f7-range', require('./form/form-slider.vue'))
-  Vue.component('f7-checkbox-group', require('./form/checkbox-group.vue'))
-  Vue.component('f7-radio-group', require('./form/radio-group.vue'))
+  Vue.component(Checkbox.name, Checkbox)
+  Vue.component(Range.name, Range)
+  Vue.component(CheckboxGroup.name, CheckboxGroup)
+  Vue.component(RadiosGroup.name, RadiosGroup)
   Vue.directive('f7-textarea', f7Textarea)
 
-  Vue.component('f7-button', require('./buttons/button.vue'))
-  Vue.component('f7-buttons-row', require('./buttons/buttons-row.vue'))
-  Vue.component('f7-list-button', require('./buttons/list-button.vue'))
+  Vue.component(Button.name, Button)
+  Vue.component(ButtonsRow.name, ButtonsRow)
+  Vue.component(ListButton.name, ListButton)
 
-  Vue.component('f7-actions', require('./action-sheet/actions.vue'))
-  Vue.component('f7-action-group', require('./action-sheet/action-group.vue'))
-  Vue.component('f7-action-button', require('./action-sheet/action-button.vue'))
+  Vue.component(Actions.name, Actions)
+  Vue.component(ActionsGroup.name, ActionsGroup)
+  Vue.component(ActionButton.name, ActionButton)
 
-  Vue.component('f7-picker', require('./picker/picker.vue'))
-  Vue.component('f7-picker-inner', require('./picker/picker-inner.vue'))
+  Vue.component(PickerModal.name, PickerModal)
+  Vue.component(PickerModalInner.name, PickerModalInner)
 }

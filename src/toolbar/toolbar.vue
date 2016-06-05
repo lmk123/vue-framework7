@@ -8,6 +8,7 @@
 
 <script type="text/babel">
   export default {
+    name: 'f7-toolbar',
     props: {
       type: {
         type: String,

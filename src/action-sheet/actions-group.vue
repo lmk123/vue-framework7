@@ -7,6 +7,7 @@
 
 <script type="text/babel">
   export default {
+    name: 'f7-actions-group',
     props: {
       title: {
         type: String,

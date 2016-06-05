@@ -7,6 +7,7 @@
 
 <script type="text/babel">
   export default {
+    name: 'f7-checkbox',
     props: {
       value: null,
       model: {

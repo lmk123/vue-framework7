@@ -1,11 +1,11 @@
 <template>
-  <a class="tab-link">
+  <div class="picker-modal-inner">
     <slot></slot>
-  </a>
+  </div>
 </template>
 
 <script type="text/babel">
   export default {
-    name: 'f7-tabbar-item'
+    name: 'f7-picker-modal-inner'
   }
 </script>
