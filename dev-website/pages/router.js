@@ -53,6 +53,9 @@ router.map({
   },
   '/preloader': {
     component: require('./preloader.vue')
+  },
+  '/login': {
+    component: require('./login.vue')
   }
 })
 

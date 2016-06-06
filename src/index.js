@@ -58,6 +58,8 @@ import PickerModalInner from './picker-modal/picker-inner.vue'
 
 import Preloader from './preloader.vue'
 
+import Login from './login.vue'
+
 export default function (Vue) {
   Vue.component(Modal.name, Modal)
 
@@ -117,4 +119,6 @@ export default function (Vue) {
   Vue.component(PickerModalInner.name, PickerModalInner)
 
   Vue.component(Preloader.name, Preloader)
+
+  Vue.component(Login.name, Login)
 }

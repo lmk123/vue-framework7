@@ -29,7 +29,7 @@
  - [x] [Popup](http://framework7.io/docs/popup.html) ([Demo](http://f7.limingkai.cn/#!/popup))
  - [ ] [Popover](http://framework7.io/docs/popover.html)
  - [x] [Action Sheet](http://framework7.io/docs/action-sheet.html) ([Demo](http://f7.limingkai.cn/#!/actions))
- - [ ] [Login Screen](http://framework7.io/docs/login-screen.html)
+ - [x] [Login Screen](http://framework7.io/docs/login-screen.html) ([Demo](http://f7.limingkai.cn/#!/login))
  - [x] [Picker Modal](http://framework7.io/docs/picker-modal.html) ([Demo](http://f7.limingkai.cn/#!/picker-modal))
  - [x] [Preloader Indicator](http://framework7.io/docs/preloader.html) ([Demo](http://f7.limingkai.cn/#!/preloader))
  - [ ] [Progress Bar](http://framework7.io/docs/progressbar.html)

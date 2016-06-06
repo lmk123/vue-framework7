@@ -14,4 +14,5 @@
   <a v-link="'/actions'">Action Sheet</a><br/>
   <a v-link="'/picker-modal'">Picker Modal</a><br/>
   <a v-link="'/preloader'">Preloader Indicator</a><br/>
+  <a v-link="'/login'">Login Screen</a><br/>
 </template>
