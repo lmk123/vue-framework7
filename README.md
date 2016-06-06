@@ -11,9 +11,31 @@
 ### Including scripts
 
 ```html
-<link rel="stylesheet" href="https://npmcdn.com/framework7/dist/css/framework7.ios.min.css">
-<script src="https://npmcdn.com/vue/dist/vue.min.js"></script>
-<script src="https://npmcdn.com/vue-framework7/f7.js"></script>
+<html>
+<head>
+  <link rel="stylesheet" href="https://npmcdn.com/framework7/dist/css/framework7.ios.min.css">
+</head>
+<body>
+  <f7-views>
+    <f7-view>
+      <f7-pages>
+        <f7-page>
+          <f7-page-content>Hello F7.</f7-page-content>
+        </f7-page>
+      </f7-pages>
+    </f7-view>
+  </f7-views>
+  <!-- including scripts before "</body>" -->
+  <script src="https://npmcdn.com/vue/dist/vue.min.js"></script>
+  <script src="https://npmcdn.com/vue-framework7/f7.js"></script>
+  <script>
+    new Vue({
+      el: 'body',
+      replace: false
+    })
+  </script>
+</body>
+</html>
 ```
 
 ### With Webpack
