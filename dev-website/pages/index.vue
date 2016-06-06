@@ -12,5 +12,5 @@
   <a v-link="'/form'">Form Elements</a><br/>
   <a v-link="'/buttons'">Buttons</a><br/>
   <a v-link="'/actions'">Action Sheet</a><br/>
-  <a v-link="'/picker'">Picker Modal</a><br/>
+  <a v-link="'/picker-modal'">Picker Modal</a><br/>
 </template>
