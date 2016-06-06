@@ -6,35 +6,19 @@
 
 [Framework7](http://framework7.io/) components built with [Vue.js](http://vuejs.org/).
 
-## Usage
+## Install
 
 ### Including scripts
 
 ```html
+<link rel="stylesheet" href="https://npmcdn.com/framework7/dist/css/framework7.ios.min.css">
 <script src="https://npmcdn.com/vue/dist/vue.min.js"></script>
 <script src="https://npmcdn.com/vue-framework7/f7.js"></script>
 ```
 
 ### With Webpack
 
-Add follow config in your `webpack.config.js`:
-
-```js
-module: {
-  loaders: [
-    {
-      test: /\.js$/,
-      loader: 'babel-loader'
-    },
-    {
-      test: /\.vue$/,
-      loader: 'vue-loader'
-    }
-  ]
-}
-```
-
-And install `vue-framework7`:
+Install `vue-framework7`:
 
 ```
 npm i vue-framework7
@@ -43,6 +27,7 @@ npm i vue-framework7
 Then:
 
 ```js
+import 'framework7/dist/css/framework7.ios.min.css'
 import Vue from 'vue'
 import F7 from 'vue-framework7'
 Vue.use(F7)
