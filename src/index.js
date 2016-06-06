@@ -60,6 +60,8 @@ import Preloader from './preloader.vue'
 
 import Login from './login.vue'
 
+import ProgressBar from './progress.vue'
+
 export default function (Vue) {
   Vue.component(Modal.name, Modal)
 
@@ -121,4 +123,6 @@ export default function (Vue) {
   Vue.component(Preloader.name, Preloader)
 
   Vue.component(Login.name, Login)
+
+  Vue.component(ProgressBar.name, ProgressBar)
 }

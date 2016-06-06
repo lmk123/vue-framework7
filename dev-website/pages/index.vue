@@ -15,4 +15,5 @@
   <a v-link="'/picker-modal'">Picker Modal</a><br/>
   <a v-link="'/preloader'">Preloader Indicator</a><br/>
   <a v-link="'/login'">Login Screen</a><br/>
+  <a v-link="'/progressbar'">Progress Bar</a><br/>
 </template>

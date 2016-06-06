@@ -56,6 +56,9 @@ router.map({
   },
   '/login': {
     component: require('./login.vue')
+  },
+  '/progressbar': {
+    component: require('./progressbar.vue')
   }
 })
 

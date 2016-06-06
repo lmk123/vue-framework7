@@ -32,7 +32,7 @@
  - [x] [Login Screen](http://framework7.io/docs/login-screen.html) ([Demo](http://f7.limingkai.cn/#!/login))
  - [x] [Picker Modal](http://framework7.io/docs/picker-modal.html) ([Demo](http://f7.limingkai.cn/#!/picker-modal))
  - [x] [Preloader Indicator](http://framework7.io/docs/preloader.html) ([Demo](http://f7.limingkai.cn/#!/preloader))
- - [ ] [Progress Bar](http://framework7.io/docs/progressbar.html)
+ - [x] [Progress Bar](http://framework7.io/docs/progressbar.html) ([Demo](http://f7.limingkai.cn/#!/progressbar))
 
 ### LIST VIEW (TABLE VIEW)
 
