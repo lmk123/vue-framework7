@@ -56,6 +56,8 @@ import ActionsGroup from './action-sheet/actions-group.vue'
 import PickerModal from './picker-modal/picker.vue'
 import PickerModalInner from './picker-modal/picker-inner.vue'
 
+import Preloader from './preloader.vue'
+
 export default function (Vue) {
   Vue.component(Modal.name, Modal)
 
@@ -113,4 +115,6 @@ export default function (Vue) {
 
   Vue.component(PickerModal.name, PickerModal)
   Vue.component(PickerModalInner.name, PickerModalInner)
+
+  Vue.component(Preloader.name, Preloader)
 }

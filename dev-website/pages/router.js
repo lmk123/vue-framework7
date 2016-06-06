@@ -50,6 +50,9 @@ router.map({
   },
   '/picker-modal': {
     component: require('./picker.vue')
+  },
+  '/preloader': {
+    component: require('./preloader.vue')
   }
 })
 
