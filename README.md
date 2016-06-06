@@ -6,14 +6,56 @@
 
 [Framework7](http://framework7.io/) components built with [Vue.js](http://vuejs.org/).
 
-## TODO
+## Usage
+
+### Including scripts
+
+```html
+<script src="https://npmcdn.com/vue/dist/vue.min.js"></script>
+<script src="https://npmcdn.com/vue-framework7/f7.js"></script>
+```
+
+### With Webpack
+
+Add follow config in your `webpack.config.js`:
+
+```js
+module: {
+  loaders: [
+    {
+      test: /\.js$/,
+      loader: 'babel-loader'
+    },
+    {
+      test: /\.vue$/,
+      loader: 'vue-loader'
+    }
+  ]
+}
+```
+
+And install `vue-framework7`:
+
+```
+npm i vue-framework7
+```
+
+Then:
+
+```js
+import Vue from 'vue'
+import F7 from 'vue-framework7'
+Vue.use(F7)
+```
+
+## TODO & Demo
 
 ### NAVBARS & TOOLBARS
 
  - [x] [Layout types](http://framework7.io/docs/navbar-toolbar-layouts.html)
  - [x] [Navbar](http://framework7.io/docs/navbar.html) ([Demo](http://f7.limingkai.cn/#!/navbar))
  - [ ] [Dynamic Navbar](http://framework7.io/docs/dynamic-navbar.html)
- - [X] [Sub Navbar](http://framework7.io/docs/sub-navbar.html) ([Demo](http://f7.limingkai.cn/#!/navbar))
+ - [x] [Sub Navbar](http://framework7.io/docs/sub-navbar.html) ([Demo](http://f7.limingkai.cn/#!/navbar))
  - [x] [Toolbar](http://framework7.io/docs/toolbar.html) ([Demo](http://f7.limingkai.cn/#!/toolbar))
  - [x] [Tab Bar](http://framework7.io/docs/tabbar.html) ([Demo](http://f7.limingkai.cn/#!/tabbar))
  - [ ] [Hide Bars On Scroll](http://framework7.io/docs/hide-bars-on-scroll.html)
@@ -69,3 +111,7 @@
  - [ ] [Message Bar](http://framework7.io/docs/messagebar.html)
  - [ ] [Notifications](http://framework7.io/docs/notifications.html)
  - [ ] [Lazy Load](http://framework7.io/docs/lazy-load.html)
+
+# License
+
+MIT

@@ -62,7 +62,7 @@ import Login from './login.vue'
 
 import ProgressBar from './progress.vue'
 
-export default function (Vue) {
+function install (Vue) {
   Vue.component(Modal.name, Modal)
 
   Vue.component(ContentBlock.name, ContentBlock)
@@ -125,4 +125,12 @@ export default function (Vue) {
   Vue.component(Login.name, Login)
 
   Vue.component(ProgressBar.name, ProgressBar)
+}
+
+export default install
+
+// auto install
+const { Vue } = window
+if (Vue) {
+  Vue.use(install)
 }
