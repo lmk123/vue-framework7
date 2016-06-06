@@ -32,15 +32,7 @@
     },
     computed: {
       style () {
-        const p = 100 - this.progress
-        // todo 检测浏览器的 vendor prefix
-        return `
-        -ms-transform: translate3d(-${p}%, 0px, 0px);
-        -moz-transform: translate3d(-${p}%, 0px, 0px);
-        -o-transform: translate3d(-${p}%, 0px, 0px);
-        -webkit-transform: translate3d(-${p}%, 0px, 0px);
-        transform: translate3d(-${p}%, 0px, 0px);
-        `
+        return `transform: translate3d(${this.progress - 100}%, 0px, 0px)`
       }
     },
     methods: {
