@@ -19,7 +19,7 @@
       </div>
       <div class="modal-text" v-else v-text="text"></div>
       <div class="input-field" v-show="type === 'prompt'">
-        <input type="text" class="modal-text-input" v-model="promptValue"></div>
+        <input type="text" class="modal-text-input" v-model="promptValue" v-el:input></div>
     </div>
     <div class="modal-buttons"
          :class="{'modal-buttons-1':type === 'alert','modal-buttons-2':type === 'confirm' || type === 'prompt'}">
@@ -93,11 +93,12 @@
         this.type = 'prompt'
         this.text = text
         this.title = title
+        this.promptValue = ''
         this.show = true
+        this.$nextTick(() => this.$els.input.focus())
         return new Promise(resolve => {
           this.$once('prompt', ok => {
             this.show = false
-            this.promptValue = ''
             this.$nextTick(() => resolve(ok ? this.promptValue : null))
           })
         })
