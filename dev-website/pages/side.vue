@@ -15,13 +15,24 @@
     <f7-view>
       <f7-pages>
         <f7-page>
+          <f7-navbar type="fixed">
+            <a class="link" slot="left" v-link="'/'">
+              <f7-icon class="icon-back"></f7-icon>
+              <span>Back</span>
+            </a>
+            <span slot="center">Side Panels</span>
+          </f7-navbar>
           <f7-page-content>
-            <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/side.vue">Code
-              is
-              here.</a>
             <f7-content-block>
-              <button @click="showLeft">Left side with "reveal" effect.</button>
-              <button @click="showRight">Right side with "cover" effect.</button>
+              <a target="_blank" href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/side.vue">Code
+                is
+                here.</a>
+              <p>
+                <f7-button @click="showLeft">Left side with "reveal" effect.</f7-button>
+              </p>
+              <p>
+                <f7-button @click="showRight">Right side with "cover" effect.</f7-button>
+              </p>
             </f7-content-block>
           </f7-page-content>
         </f7-page>

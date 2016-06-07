@@ -3,43 +3,53 @@
     <f7-view>
       <f7-pages>
         <f7-page>
+          <f7-navbar type="fixed">
+            <a class="link" slot="left" v-link="'/'">
+              <f7-icon class="icon-back"></f7-icon>
+              <span>Back</span>
+            </a>
+            <span slot="center">Tab Bar</span>
+          </f7-navbar>
           <f7-page-content>
-            <a target="_blank"
-               href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/toolbar.vue">Code
-              is
-              here.</a>
-
-            <button @click="$refs.tabbar.hide">Hide tabbar</button>
-            <button @click="$refs.tabbar.show">Show tabbar</button>
+            <f7-content-block>
+              <a target="_blank"
+                 href="https://github.com/lmk123/vue-framework7/blob/master/dev-website/pages/toolbar.vue">Code
+                is
+                here.</a>
+              <p>
+                <f7-button @click="$refs.tabbar.hide">Hide tabbar</f7-button>
+              </p>
+              <p>
+                <f7-button @click="$refs.tabbar.show">Show tabbar</f7-button>
+              </p>
+            </f7-content-block>
           </f7-page-content>
-
           <f7-tabbar type="fixed" has-label v-ref:tabbar>
-            <f7-tabbar-item>
+            <f7-tabbar-item v-link="'/'">
               <f7-icon class="demo-icon-1">
                 <f7-badge>4</f7-badge>
               </f7-icon>
               <f7-tabbar-label>tab 1</f7-tabbar-label>
             </f7-tabbar-item>
-            <f7-tabbar-item>
+            <f7-tabbar-item v-link="'/'">
               <f7-icon class="demo-icon-2">
                 <f7-badge>9</f7-badge>
               </f7-icon>
               <f7-tabbar-label>tab 2</f7-tabbar-label>
             </f7-tabbar-item>
-            <f7-tabbar-item>
+            <f7-tabbar-item v-link="'/'">
               <f7-icon class="demo-icon-3">
                 <f7-badge>2</f7-badge>
               </f7-icon>
               <f7-tabbar-label>tab 3</f7-tabbar-label>
             </f7-tabbar-item>
-            <f7-tabbar-item>
+            <f7-tabbar-item v-link="'/'">
               <f7-icon class="demo-icon-4">
                 <f7-badge>7</f7-badge>
               </f7-icon>
               <f7-tabbar-label>tab 4</f7-tabbar-label>
             </f7-tabbar-item>
           </f7-tabbar>
-
         </f7-page>
       </f7-pages>
     </f7-view>
