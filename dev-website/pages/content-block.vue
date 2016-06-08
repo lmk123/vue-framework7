@@ -6,7 +6,6 @@
           <f7-navbar type="fixed">
             <a class="link" slot="left" v-link="'/'">
               <f7-icon class="icon-back"></f7-icon>
-              <span>Back</span>
             </a>
             <span slot="center">Content Block</span>
           </f7-navbar>
