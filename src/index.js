@@ -63,68 +63,72 @@ import Login from './login.vue'
 import ProgressBar from './progress.vue'
 
 function install (Vue) {
-  Vue.component(Modal.name, Modal)
+  function installComponent (component) {
+    Vue.component(component.name, component)
+  }
 
-  Vue.component(ContentBlock.name, ContentBlock)
-  Vue.component(ContentBlockTitle.name, ContentBlockTitle)
+  installComponent(Modal)
 
-  Vue.component(Views.name, Views)
-  Vue.component(View.name, View)
-  Vue.component(Pages.name, Pages)
-  Vue.component(Page.name, Page)
-  Vue.component(PageContent.name, PageContent)
+  installComponent(ContentBlock)
+  installComponent(ContentBlockTitle)
 
-  Vue.component(Navbar.name, Navbar)
+  installComponent(Views)
+  installComponent(View)
+  installComponent(Pages)
+  installComponent(Page)
+  installComponent(PageContent)
 
-  Vue.component(Toolbar.name, Toolbar)
-  Vue.component(ToolbarItem.name, ToolbarItem)
+  installComponent(Navbar)
 
-  Vue.component(Tabbar.name, Tabbar)
-  Vue.component(TabbarItem.name, TabbarItem)
-  Vue.component(TabbarLabel.name, TabbarLabel)
+  installComponent(Toolbar)
+  installComponent(ToolbarItem)
 
-  Vue.component(Badge.name, Badge)
-  Vue.component(Icon.name, Icon)
+  installComponent(Tabbar)
+  installComponent(TabbarItem)
+  installComponent(TabbarLabel)
 
-  Vue.component(Searchbar.name, Searchbar)
+  installComponent(Badge)
+  installComponent(Icon)
 
-  Vue.component(Side.name, Side)
+  installComponent(Searchbar)
 
-  Vue.component(Row.name, Row)
-  Vue.component(Col.name, Col)
+  installComponent(Side)
 
-  Vue.component(Popup.name, Popup)
+  installComponent(Row)
+  installComponent(Col)
 
-  Vue.component(List.name, List)
-  Vue.component(ListBlock.name, ListBlock)
-  Vue.component(ListGroup.name, ListGroup)
-  Vue.component(ListGroupTitle.name, ListGroupTitle)
-  Vue.component(ListLabel.name, ListLabel)
-  Vue.component(ListItem.name, ListItem)
-  Vue.component(ListDivider.name, ListDivider)
+  installComponent(Popup)
 
-  Vue.component(Checkbox.name, Checkbox)
-  Vue.component(Range.name, Range)
-  Vue.component(CheckboxGroup.name, CheckboxGroup)
-  Vue.component(RadiosGroup.name, RadiosGroup)
+  installComponent(List)
+  installComponent(ListBlock)
+  installComponent(ListGroup)
+  installComponent(ListGroupTitle)
+  installComponent(ListLabel)
+  installComponent(ListItem)
+  installComponent(ListDivider)
+
+  installComponent(Checkbox)
+  installComponent(Range)
+  installComponent(CheckboxGroup)
+  installComponent(RadiosGroup)
   Vue.directive('f7-textarea', f7Textarea)
 
-  Vue.component(Button.name, Button)
-  Vue.component(ButtonsRow.name, ButtonsRow)
-  Vue.component(ListButton.name, ListButton)
+  installComponent(Button)
+  installComponent(ButtonsRow)
+  installComponent(ListButton)
 
-  Vue.component(Actions.name, Actions)
-  Vue.component(ActionsGroup.name, ActionsGroup)
-  Vue.component(ActionButton.name, ActionButton)
+  installComponent(Actions)
+  installComponent(ActionsGroup)
+  installComponent(ActionButton)
 
-  Vue.component(PickerModal.name, PickerModal)
-  Vue.component(PickerModalInner.name, PickerModalInner)
+  installComponent(PickerModal)
+  installComponent(PickerModalInner)
 
-  Vue.component(Preloader.name, Preloader)
+  installComponent(Preloader)
 
-  Vue.component(Login.name, Login)
+  installComponent(Login)
 
-  Vue.component(ProgressBar.name, ProgressBar)
+  installComponent(ProgressBar)
 }
 
 export default install
