@@ -3,13 +3,13 @@
     <f7-view>
       <f7-pages>
         <f7-page>
-          <f7-navbar type="fixed">
+          <f7-navbar type="through">
             <a class="link" slot="left" v-link="'/'">
               <f7-icon class="icon-back"></f7-icon>
             </a>
             <span slot="center">Center</span>
             <span slot="right">Right</span>
-            <span slot="subnavbar">Sub Navbar</span>
+            <span slot="subnavbar">Sub Navbar (type="through")</span>
           </f7-navbar>
           <f7-page-content>
             <f7-content-block>
