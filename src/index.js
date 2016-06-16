@@ -62,6 +62,12 @@ import Login from './login.vue'
 
 import ProgressBar from './progress.vue'
 
+import Card from './cards/card.vue'
+import CardHeader from './cards/card-header.vue'
+import CardFooter from './cards/card-footer.vue'
+import CardContent from './cards/card-content.vue'
+import CardContentInner from './cards/card-content-inner.vue'
+
 function install (Vue) {
   function installComponent (component) {
     Vue.component(component.name, component)
@@ -129,6 +135,12 @@ function install (Vue) {
   installComponent(Login)
 
   installComponent(ProgressBar)
+
+  installComponent(Card)
+  installComponent(CardFooter)
+  installComponent(CardContent)
+  installComponent(CardContentInner)
+  installComponent(CardHeader)
 }
 
 export default install

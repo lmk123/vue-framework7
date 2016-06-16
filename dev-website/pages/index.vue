@@ -26,6 +26,7 @@
                 <f7-list-item link v-link="'/preloader'"><span slot="title">Preloader Indicator</span></f7-list-item>
                 <f7-list-item link v-link="'/login'"><span slot="title">Login Screen</span></f7-list-item>
                 <f7-list-item link v-link="'/progressbar'"><span slot="title">Progress Bar</span></f7-list-item>
+                <f7-list-item link v-link="'/cards'"><span slot="title">Cards</span></f7-list-item>
               </f7-list>
             </f7-list-block>
           </f7-page-content>

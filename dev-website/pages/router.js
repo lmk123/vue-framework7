@@ -59,6 +59,9 @@ router.map({
   },
   '/progressbar': {
     component: require('./progressbar.vue')
+  },
+  '/cards': {
+    component: require('./card.vue')
   }
 })
 
