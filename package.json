@@ -1,6 +1,6 @@
 {
   "name": "vue-framework7",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "description": "Framework7 components built with Vue.js",
   "main": "./src/index.js",
   "keywords": [
@@ -20,9 +20,9 @@
     "start": "webpack-dev-server --inline --open --config build/webpack.dev.config.js",
     "build": "webpack --config build/webpack.build.config.js",
     "combine": "webpack --config build/webpack.combine.config.js",
-    "lint": "eslint --ignore-pattern '/dist/' \"**/*.{js,vue}\"",
-    "prepublish": "npm run combine",
-    "predeploy": "npm run build",
+    "lint": "eslint --ignore-pattern '/dist/' --ignore-pattern '/f7.js' \"**/*.{js,vue}\"",
+    "prepublish": "npm run lint && npm run combine",
+    "predeploy": "npm run lint && npm run build",
     "deploy": "gh-pages -d dist -a"
   },
   "dependencies": {
