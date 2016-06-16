@@ -62,6 +62,9 @@ router.map({
   },
   '/cards': {
     component: require('./card.vue')
+  },
+  '/media-list': {
+    component: require('./media-list.vue')
   }
 })
 

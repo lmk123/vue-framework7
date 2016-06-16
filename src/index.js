@@ -35,10 +35,19 @@ import Popup from './popup.vue'
 import List from './list/list.vue'
 import ListBlock from './list/list-block.vue'
 import ListItem from './list/list-item.vue'
+import ListItemAfter from './list/list-item-after.vue'
+import ListItemInner from './list/list-item-inner.vue'
+import ListItemInput from './list/list-item-input.vue'
+import ListItemTitle from './list/list-item-title.vue'
 import ListGroup from './list/list-group.vue'
 import ListGroupTitle from './list/list-group-title.vue'
 import ListDivider from './list/list-divider.vue'
 import ListLabel from './list/list-label.vue'
+
+import ListItemMedia from './list/list-item-media.vue'
+import ListItemSubtitle from './media-list/list-item-subtitle.vue'
+import ListItemText from './media-list/list-item-text.vue'
+import ListItemTitleRow from './media-list/list-item-title-row.vue'
 
 import Checkbox from './form/form-switch.vue'
 import CheckboxGroup from './form/checkbox-group.vue'
@@ -112,6 +121,15 @@ function install (Vue) {
   installComponent(ListLabel)
   installComponent(ListItem)
   installComponent(ListDivider)
+  installComponent(ListItemAfter)
+  installComponent(ListItemInner)
+  installComponent(ListItemInput)
+  installComponent(ListItemTitle)
+
+  installComponent(ListItemMedia)
+  installComponent(ListItemSubtitle)
+  installComponent(ListItemText)
+  installComponent(ListItemTitleRow)
 
   installComponent(Checkbox)
   installComponent(Range)
