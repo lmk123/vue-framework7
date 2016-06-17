@@ -20,12 +20,20 @@
               <f7-list-block>
                 <f7-list>
                   <f7-list-item>
-                    <span slot="title">Username</span>
-                    <input type="text" placeholder="Username" slot="input">
+                    <f7-list-item-inner>
+                      <f7-list-item-title label>Username</f7-list-item-title>
+                      <f7-list-item-input>
+                        <input type="text" placeholder="Username">
+                      </f7-list-item-input>
+                    </f7-list-item-inner>
                   </f7-list-item>
                   <f7-list-item>
-                    <span slot="title">Password</span>
-                    <input type="password" placeholder="Password" slot="input">
+                    <f7-list-item-inner>
+                      <f7-list-item-title label>Password</f7-list-item-title>
+                      <f7-list-item-input>
+                        <input type="password" placeholder="Password">
+                      </f7-list-item-input>
+                    </f7-list-item-inner>
                   </f7-list-item>
                 </f7-list>
               </f7-list-block>
