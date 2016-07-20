@@ -9,11 +9,25 @@
       </div>
     </div>
     <f7-searchbar :query.sync="query"
+                  :placeholder="placeholder"
+                  :cancel-text="cancelText"
+                  :hide-overlay="hideOverlay"
                   @search="onSearch"
                   @clear-search="onClearSearch">
     </f7-searchbar>
     <div class="page-content">
-      Your query: {{query}}
+      <p>
+        Your query: <input type="text" v-model="query">
+      </p>
+      <p>
+        Placeholder: <input type="text" v-model="placeholder">
+      </p>
+      <p>
+        Cancel Text: <input type="text" v-model="cancelText">
+      </p>
+      <p>
+        Hide Overlay? <input type="checkbox" v-model="hideOverlay">
+      </p>
     </div>
   </div>
 </template>
@@ -22,7 +36,10 @@
   export default {
     data () {
       return {
-        query: ''
+        query: '',
+        placeholder: '',
+        cancelText: 'Cancel',
+        hideOverlay: false
       }
     },
     methods: {
