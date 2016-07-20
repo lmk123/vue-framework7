@@ -1,3 +1,4 @@
 export default {
-  navbar: require('./navbar.vue')
+  Navbar: require('./navbar.vue'),
+  Toolbar: require('./toolbar.vue')
 }

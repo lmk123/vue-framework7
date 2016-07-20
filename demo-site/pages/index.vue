@@ -8,7 +8,23 @@
       </div>
     </div>
     <div class="page-content">
-      <a v-link="{ name: 'page', params: { name: 'navbar' } }">Navbar</a>
+      <p v-for="key in $keys">
+        <a v-link="{ name: 'page', params: { name: key } }" v-text="key"></a>
+      </p>
+      <p>
+
+      </p>
     </div>
   </div>
 </template>
+
+<script type="text/babel">
+  import map from '../page-components'
+  const keys = Object.keys(map)
+  export default {
+    data () {
+      this.$keys = keys
+      return {}
+    }
+  }
+</script>

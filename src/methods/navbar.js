@@ -1,5 +1,5 @@
-// @see http://framework7.io/docs/navbar.html#related-app-and-view-methods
-// @see https://github.com/nolimits4web/Framework7/blob/master/src/js/navbars.js#L195
+// API 文档: http://framework7.io/docs/navbar.html#related-app-and-view-methods
+// 源码: https://github.com/nolimits4web/Framework7/blob/master/src/js/navbars.js#L195
 
 import f7 from '../f7'
 import oneTE from '../utils/one-transition-end'

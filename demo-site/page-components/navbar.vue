@@ -4,7 +4,7 @@
       <div class="navbar-inner">
         <div class="left"><a v-link="{ name: 'home' }" class="link"><i class="icon icon-back"></i><span>Back</span></a>
         </div>
-        <div class="center">Center</div>
+        <div class="center">Navbar</div>
         <div class="right"><a class="link icon-only"><i class="icon icon-bars"></i></a></div>
       </div>
     </div>
