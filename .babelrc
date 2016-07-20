@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "es2015-tiny"
+  ],
+  "plugins": [
+    [
+      "transform-runtime",
+      {
+        "polyfill": false,
+        "regenerator": false
+      }
+    ]
+  ]
+}

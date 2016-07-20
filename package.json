@@ -1,0 +1,66 @@
+{
+  "name": "vue-framework7",
+  "version": "0.3.0",
+  "description": "Framework7 components built with Vue.js",
+  "main": "./src/index.js",
+  "keywords": [
+    "vue",
+    "framework7",
+    "component"
+  ],
+  "files": [
+    "src",
+    "f7.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmk123/vue-framework7.git"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --inline --config build/webpack.dev.config.js",
+    "build": "webpack --config build/webpack.build.config.js",
+    "combine": "webpack --config build/webpack.combine.config.js",
+    "lint": "eslint --ignore-pattern '/dist/' --ignore-pattern '/f7.js' \"**/*.{js,vue}\"",
+    "prepublish": "npm run lint && npm run combine",
+    "predeploy": "npm run lint && npm run build",
+    "deploy": "gh-pages -d dist -a"
+  },
+  "peerDependencies": {
+    "framework7": "^1.4.2"
+  },
+  "devDependencies": {
+    "vue": "^1.0.21",
+    "fs-extra": "^0.30.0",
+    "gh-pages": "^0.11.0",
+    "fastclick": "^1.0.6",
+    "vue-router": "^0.7.13",
+
+    "babel-core": "^6.7.6",
+    "babel-plugin-transform-runtime": "^6.7.5",
+    "babel-preset-es2015-tiny": "^6.6.0",
+
+    "babel-loader": "^6.2.4",
+    "vue-loader": "^8.2.2",
+    "vue-style-loader": "^1.0.0",
+    "vue-html-loader": "^1.2.2",
+    "file-loader": "^0.9.0",
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.0",
+    "html-webpack-plugin": "^2.14.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "webpack-dev-server": "^1.14.1",
+    "openpack": "^1.0.0",
+    "webpack": "^1.12.14",
+    "eslint": "^3.1.1",
+    "eslint-plugin-html": "^1.5.1",
+    "eslint-config-standard": "^5.3.5",
+    "eslint-plugin-promise": "^2.0.0",
+    "eslint-plugin-standard": "^2.0.0"
+  },
+  "author": "Milk Lee <milk.lee@qq.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lmk123/vue-framework7/issues"
+  },
+  "homepage": "https://github.com/lmk123/vue-framework7#readme"
+}
