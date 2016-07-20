@@ -1,5 +1,5 @@
 <template>
-  <form class="searchbar"
+  <form class="searchbar searchbar-init"
         :class="{ 'searchbar-active': active, 'searchbar-not-empty': query }"
         @submit.prevent="search">
     <div class="searchbar-input">
@@ -63,8 +63,10 @@
       },
       clear () {
         this.query = ''
-        this.$nextTick(() => this.$els.input.focus())
-        this.$emit('clear-search')
+        this.$nextTick(() => {
+          this.$els.input.focus()
+          this.$emit('clear-search')
+        })
       },
       cancel () {
         this.query = ''
