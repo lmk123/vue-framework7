@@ -1,6 +1,6 @@
 <template>
   <div class="page navbar-fixed">
-    <div class="navbar" v-el:navbar>
+    <div class="navbar">
       <div class="navbar-inner">
         <div class="left"><a v-link="{ name: 'home' }" class="link"><i class="icon icon-back"></i><span>Back</span></a>
         </div>
@@ -21,10 +21,10 @@
   export default {
     methods: {
       hide () {
-        this.$f7.hideNavbar(this.$els.navbar)
+        this.$f7.hideNavbar()
       },
       show () {
-        this.$f7.showNavbar(this.$els.navbar)
+        this.$f7.showNavbar()
       }
     }
   }
