@@ -5,6 +5,7 @@ import './methods/toolbar'
 import './methods/panel'
 import initModal from './methods/modal'
 import initActionSheet from './methods/actions'
+import './methods/login'
 
 import SearchBar from './components/searchbar.vue'
 import Popup from './components/popup.vue'
