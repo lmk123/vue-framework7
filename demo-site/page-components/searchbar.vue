@@ -44,10 +44,10 @@
     },
     methods: {
       onSearch () {
-        window.alert('"search" event')
+        this.$f7.alert('"search" event')
       },
       onClearSearch () {
-        window.alert('"clear-search" event')
+        this.$f7.alert('"clear-search" event')
       }
     }
   }
