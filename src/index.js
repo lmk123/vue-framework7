@@ -6,11 +6,13 @@ import './methods/panel'
 import initModal from './methods/modal'
 
 import SearchBar from './components/searchbar.vue'
+import Popup from './components/popup.vue'
 
 function install (Vue) {
   Vue.prototype.$f7 = f7
   initModal(Vue)
   regComponent(SearchBar)
+  regComponent(Popup)
 
   function regComponent (component) {
     Vue.component(component.name, component)
