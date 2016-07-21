@@ -14,6 +14,7 @@ function install (Vue) {
 
   initModal(Vue)
   initActionSheet(Vue)
+
   regComponent(SearchBar)
   regComponent(Popup)
 

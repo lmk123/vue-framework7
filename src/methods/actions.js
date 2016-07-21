@@ -14,6 +14,7 @@ export default function (Vue) {
           }
         },
         ready () {
+          // todo 偶尔背景会没有动画效果, 估计跟重绘有关
           setTimeout(this.show, 10)
         }
       }).$mount().$appendTo('body')

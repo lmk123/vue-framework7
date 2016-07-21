@@ -8,12 +8,17 @@
       </div>
     </div>
     <div class="page-content">
-      <p v-for="key in $keys">
-        <a v-link="{ name: 'page', params: { name: key } }" v-text="key"></a>
-      </p>
-      <p>
-
-      </p>
+      <div class="list-block">
+        <ul>
+          <li v-for="key in $keys">
+            <a class="item-link item-content" v-link="{ name: 'page', params: { name: key } }">
+              <div class="item-inner">
+                <div class="item-title" v-text="key"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
