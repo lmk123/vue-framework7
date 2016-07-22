@@ -11,6 +11,9 @@ export default function (Vue) {
         events: {
           choose (btn) {
             resolve(btn)
+            setTimeout(() => {
+              this.$destroy(true)
+            }, 1000)
           }
         },
         ready () {
