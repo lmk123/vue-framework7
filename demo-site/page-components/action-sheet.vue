@@ -50,12 +50,12 @@
             bold: true
           },
           {
-            text: 'Button2',
+            text: 'Button2'
           },
           {
             text: 'Cancel',
             color: 'red'
-          },
+          }
         ])
       },
       a2 () {
@@ -69,12 +69,12 @@
             bold: true
           },
           {
-            text: 'Button2',
+            text: 'Button2'
           },
           {
             text: 'Cancel',
             color: 'red'
-          },
+          }
         ])
       },
       a3 () {
@@ -89,7 +89,7 @@
               bold: true
             },
             {
-              text: 'Button2',
+              text: 'Button2'
             }
           ],
           [
@@ -108,10 +108,10 @@
               label: true
             },
             {
-              text: 'Mail',
+              text: 'Mail'
             },
             {
-              text: 'Messages',
+              text: 'Messages'
             }
           ],
           [
@@ -120,10 +120,10 @@
               label: true
             },
             {
-              text: 'Facebook',
+              text: 'Facebook'
             },
             {
-              text: 'Twitter',
+              text: 'Twitter'
             }
           ],
           [
@@ -139,22 +139,22 @@
           {
             text: 'Button1',
             onClick: () => {
-              this.$f7.alert('Button1 clicked');
+              this.$f7.alert('Button1 clicked')
             }
           },
           {
             text: 'Button2',
             onClick: () => {
-              this.$f7.alert('Button2 clicked');
+              this.$f7.alert('Button2 clicked')
             }
           },
           {
             text: 'Cancel',
             color: 'red',
             onClick: () => {
-              this.$f7.alert('Cancel clicked');
+              this.$f7.alert('Cancel clicked')
             }
-          },
+          }
         ])
       },
       a6 () {

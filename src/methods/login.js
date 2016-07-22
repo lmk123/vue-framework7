@@ -7,7 +7,7 @@ const { modal } = mt.transitions
 f7.loginScreen = function (l = document.querySelector('.login-screen')) {
   modal.beforeEnter(l)
   // 触发重绘
-  const { clientHeight } = l
+  const { clientHeight } = l // eslint-disable-line
   modal.enter(l, noop)
 }
 

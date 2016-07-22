@@ -51,7 +51,7 @@ f7.openPanel = function (target) {
   panel.style.display = 'block'
   // Trigger reLayout: https://gist.github.com/paulirish/5d52fb081b3570c81e3a
   // 不这么做的话, 偶尔不会触发动画效果
-  const { clientLeft } = panel;
+  const { clientLeft } = panel // eslint-disable-line
   document.body.classList.add(`with-panel-${target}-${getPanelEffect(panel)}`)
 }
 
@@ -59,7 +59,7 @@ f7.openPanel = function (target) {
  * 关闭打开的那个 panel
  */
 f7.closePanel = function () {
-  const panel = document.querySelector(`.panel.active`)
+  const panel = document.querySelector('.panel.active')
   if (!panel) return
   panel.classList.remove('active')
   document.body.classList.remove(`with-panel-${getPanelTarget(panel)}-${getPanelEffect(panel)}`)

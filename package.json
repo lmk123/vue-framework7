@@ -20,7 +20,7 @@
     "start": "webpack-dev-server --inline --config build/webpack.dev.config.js",
     "build": "webpack --config build/webpack.build.config.js",
     "combine": "webpack --config build/webpack.combine.config.js",
-    "lint": "eslint --ignore-pattern '/dist/' --ignore-pattern '/f7.js' \"**/*.{js,vue}\"",
+    "lint": "eslint --ignore-pattern '/dist/' --ignore-pattern '/f7.min.js' \"**/*.{js,vue}\"",
     "prepublish": "npm run lint && npm run combine",
     "predeploy": "npm run lint && npm run build",
     "deploy": "gh-pages -d dist -a"

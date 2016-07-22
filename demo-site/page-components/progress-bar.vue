@@ -83,9 +83,10 @@
             progress += Math.random() * 20
             this.$f7.setProgressbar(name, progress)
             if (progressBefore < 100) {
-              simulateLoading() //keep "loading"
+              simulateLoading() // keep "loading"
+            } else {
+              this.$f7.hideProgressbar(name) // hide
             }
-            else this.$f7.hideProgressbar(name) //hide
           }, Math.random() * 200 + 200)
         }
         simulateLoading()
