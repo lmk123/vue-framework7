@@ -7,5 +7,6 @@ export default {
   Popup: require('./popup.vue'),
   'Action Sheet': require('./action-sheet.vue'),
   'Login Screen': require('./login-screen.vue'),
-  'Picker Modal': require('./picker-modal.vue')
+  'Picker Modal': require('./picker-modal.vue'),
+  'Progress Bar': require('./progress-bar.vue')
 }
