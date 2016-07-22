@@ -1,6 +1,6 @@
 {
   "name": "vue-framework7",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Framework7 components built with Vue.js",
   "main": "./src/index.js",
   "keywords": [
@@ -10,7 +10,7 @@
   ],
   "files": [
     "src",
-    "f7.js"
+    "f7.min.js"
   ],
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "deploy": "gh-pages -d dist -a"
   },
   "peerDependencies": {
+    "vue": "^1.0.0",
     "framework7": "^1.4.2"
   },
   "devDependencies": {
