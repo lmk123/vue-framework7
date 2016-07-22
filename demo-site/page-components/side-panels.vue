@@ -10,6 +10,10 @@
     </div>
     <div class="page-content">
       <div class="content-block">
+        <a href="https://github.com/lmk123/vue-framework7/tree/master/demo-site/page-components/side-panels.vue">Source
+          code</a>
+      </div>
+      <div class="content-block">
         <p>
           Open Panels with JavaScript
         </p>

@@ -16,6 +16,10 @@
                   @clear-search="onClearSearch">
     </f7-searchbar>
     <div class="page-content">
+      <div class="content-block">
+        <a href="https://github.com/lmk123/vue-framework7/tree/master/demo-site/page-components/searchbar.vue">Source
+          code</a>
+      </div>
       <p>
         Your query: <input type="text" v-model="query">
       </p>

@@ -14,6 +14,9 @@
     </div>
     <div class="page-content">
       <div class="content-block">
+        <a href="https://github.com/lmk123/vue-framework7/tree/master/demo-site/page-components/picker-modal.vue">Source code</a>
+      </div>
+      <div class="content-block">
         <p>
           <a @click="$f7.pickerModal('info')">Open Info</a>
         </p>

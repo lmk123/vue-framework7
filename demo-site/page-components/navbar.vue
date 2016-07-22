@@ -10,6 +10,10 @@
     </div>
     <div class="page-content">
       <div class="content-block">
+        <a href="https://github.com/lmk123/vue-framework7/tree/master/demo-site/page-components/navbar.vue">Source
+          code</a>
+      </div>
+      <div class="content-block">
         <p><a class="button" @click="hide">Hide Navbar</a></p>
         <p><a class="button" @click="show">Show Navbar</a></p>
       </div>

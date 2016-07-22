@@ -13,6 +13,10 @@
       </div>
     </div>
     <div class="page-content">
+      <div class="content-block">
+        <a href="https://github.com/lmk123/vue-framework7/tree/master/demo-site/page-components/progress-bar.vue">Source
+          code</a>
+      </div>
       <div class="content-block-title">Determinate Progress Bar</div>
       <div class="content-block">
         <div class="content-block-inner">

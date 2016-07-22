@@ -14,6 +14,9 @@
     </div>
     <div class="page-content">
       <div class="content-block">
+        <a href="https://github.com/lmk123/vue-framework7/tree/master/demo-site/page-components/action-sheet.vue">Source code</a>
+      </div>
+      <div class="content-block">
         <p>
           <a @click="a1">One group, three buttons</a>
         </p>
