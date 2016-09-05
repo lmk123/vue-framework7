@@ -10,7 +10,7 @@
 
 ### Download scripts
 
-https://npmcdn.com/vue-framework7/f7.min.js
+https://unpkg.com/vue-framework7/f7.min.js
 
 ### With Webpack
 
