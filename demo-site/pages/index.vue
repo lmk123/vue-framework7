@@ -14,11 +14,11 @@
       <div class="list-block">
         <ul>
           <li v-for="key in $keys">
-            <a class="item-link item-content" v-link="{ name: 'page', params: { name: key } }">
+            <router-link class="item-link item-content" :to="{ name: 'page', params: { name: key } }">
               <div class="item-inner">
                 <div class="item-title" v-text="key"></div>
               </div>
-            </a>
+            </router-link>
           </li>
         </ul>
       </div>
@@ -26,13 +26,12 @@
   </div>
 </template>
 
-<script type="text/babel">
+<script>
   import map from '../page-components'
   const keys = Object.keys(map)
   export default {
-    data () {
+    beforeCreate () {
       this.$keys = keys
-      return {}
     }
   }
 </script>

@@ -1,11 +1,12 @@
 <template>
-  <span :class="{ progressbar: !$isInfinite, 'progressbar-infinite': $isInfinite }" v-show="isShow">
-    <span :style="style" v-if="!$isInfinite"></span>
+  <span :class="{ progressbar: !_isInfinite, 'progressbar-infinite': _isInfinite }" v-show="isShow">
+    <span :style="style" v-if="!_isInfinite"></span>
   </span>
 </template>
 
 <script type="text/babel">
   import f7 from '../f7'
+  import insertToBody from '../utils/insert-to-body'
 
   const allBar = {}
 
@@ -58,8 +59,8 @@
       }
     },
     data () {
-      this.$isTop = this.top
-      this.$isInfinite = this.infinite
+      this._isTop = this.top
+      this._isInfinite = this.infinite
       return {
         isShow: !this.hide
       }
@@ -98,18 +99,18 @@
         })
       }
     },
-    created () {
+    beforeCreate () {
       if (this.name) allBar[this.name] = this
     },
-    ready () {
-      if (this.$isTop) {
-        this.$appendTo('body')
+    mounted () {
+      if (this._isTop) {
+        this._removeInsert = insertToBody(this.$el)
       }
     },
     beforeDestroy () {
       delete allBar[this.name]
-      if (this.$isTop) {
-        document.body.removeChild(this.$el)
+      if (this._removeInsert) {
+        this._removeInsert()
       }
     }
   }

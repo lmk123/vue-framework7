@@ -2,6 +2,7 @@
 
 import f7 from '../f7'
 import ote from '../utils/one-transition-end'
+import noop from '../utils/noop'
 
 let initOverLay = function () {
   let o = document.querySelector('.panel-overlay')
@@ -11,7 +12,7 @@ let initOverLay = function () {
     document.body.appendChild(o)
   }
   o.addEventListener('click', f7.closePanel)
-  initOverLay = function () {}
+  initOverLay = noop
 }
 
 /**

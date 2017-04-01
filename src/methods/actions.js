@@ -4,23 +4,25 @@ import ActionSheet from '../components/action-sheet.vue'
 export default function (Vue) {
   const AS = Vue.extend(ActionSheet)
 
+  let asVm
+
   f7.actions = function (groups) {
+    groups = [].concat(groups)
+
+    if (!asVm) {
+      asVm = new AS({
+        propsData: { groups }
+      })
+    } else {
+      asVm.groups = groups
+    }
+
+    asVm.show()
+
     return new Promise(resolve => {
-      new AS({
-        data: { groups: Array.isArray(groups[0]) ? groups : [groups] },
-        events: {
-          choose (btn) {
-            resolve(btn)
-            setTimeout(() => {
-              this.$destroy(true)
-            }, 1000)
-          }
-        },
-        ready () {
-          // todo 偶尔背景会没有动画效果, 估计跟重绘有关
-          setTimeout(this.show, 10)
-        }
-      }).$mount().$appendTo('body')
+      asVm.$once('choose', btn => {
+        resolve(btn)
+      })
     })
   }
 }

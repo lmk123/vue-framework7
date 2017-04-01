@@ -1,13 +1,15 @@
 <template>
-  <div v-el:a class="popup-overlay" :class="{ 'modal-overlay-visible': isShow }" @click="hide"></div>
-  <div v-el:b class="popup" v-if="isShow" transition="modal">
-    <slot></slot>
+  <div>
+    <div class="popup-overlay" :class="{ 'modal-overlay-visible': isShow }" @click="hide"></div>
+    <div class="popup" v-show="isShow">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
-<script type="text/babel">
-  import m from '../mixins/modal'
-  import i from '../mixins/insert-to-body'
+<script>
+  import modalMixin from '../mixins/modal'
+  import insertToBody from '../utils/insert-to-body'
   import f7 from '../f7'
 
   const allPopups = {}
@@ -40,12 +42,16 @@
         required: true
       }
     },
-    mixins: [m, i],
+    mixins: [modalMixin],
     created () {
       allPopups[this.name] = this
     },
+    mounted () {
+      this._removeInsert = insertToBody(this.$el, true)
+    },
     beforeDestroy () {
       delete allPopups[this.name]
+      this._removeInsert()
     }
   }
 </script>

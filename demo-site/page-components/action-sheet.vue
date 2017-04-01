@@ -3,10 +3,10 @@
     <div class="navbar">
       <div class="navbar-inner">
         <div class="left">
-          <a v-link="{ name: 'home' }" class="link">
+          <router-link to="{ name: 'home' }" class="link">
             <i class="icon icon-back"></i>
             <span>Back</span>
-          </a>
+          </router-link>
         </div>
         <div class="center">Panels</div>
         <div class="right"><a class="link icon-only"><i class="icon icon-bars"></i></a></div>

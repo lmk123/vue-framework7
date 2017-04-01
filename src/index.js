@@ -7,6 +7,7 @@ import initModal from './methods/modal'
 import initActionSheet from './methods/actions'
 import './methods/login'
 
+import ActionSheet from './components/action-sheet.vue'
 import SearchBar from './components/searchbar.vue'
 import Popup from './components/popup.vue'
 import PickerModal from './components/picker-modal.vue'
@@ -18,6 +19,7 @@ function install (Vue) {
   initModal(Vue)
   initActionSheet(Vue)
 
+  regComponent(ActionSheet)
   regComponent(SearchBar)
   regComponent(Popup)
   regComponent(PickerModal)

@@ -1,65 +1,72 @@
 <template>
-  <div class="preloader-indicator-overlay" v-show="showIndic"></div>
-  <div class="preloader-indicator-modal" v-show="showIndic">
-    <span class="preloader preloader-white"></span>
-  </div>
-
-  <div class="modal-overlay" :class="{ 'modal-overlay-visible': show }"></div>
-  <div class="modal"
-       v-el:modal
-       :style="{ 'margin-top': marginTop }"
-       v-if="show"
-       :class="{ 'modal-no-buttons': type === 'preloader', 'modal-preloader': type === 'preloader' }"
-       transition="modal">
-    <div class="modal-inner">
-      <div class="modal-title" v-text="title"></div>
-      <div class="modal-text" v-show="type === 'preloader'">
-        <div class="preloader"></div>
-      </div>
-      <div class="modal-text" v-else v-text="text"></div>
-      <div class="input-field" v-show="type === 'prompt'">
-        <input type="text" class="modal-text-input" v-model="promptValue">
-      </div>
-      <div class="input-field" v-show="type === 'password'">
-        <input type="password" class="modal-text-input" placeholder="Password" v-model="password">
-      </div>
-      <div class="input-field modal-input-double" v-show="type === 'login'">
-        <input type="text"
-               placeholder="Username"
-               class="modal-text-input"
-               v-model="username">
-      </div>
-      <div class="input-field modal-input-double" v-show="type === 'login'">
-        <input type="password"
-               name="modal-password"
-               placeholder="Password"
-               class="modal-text-input"
-               v-model="password">
-      </div>
-    </div>
-    <div class="modal-buttons"
-         v-show="type !== 'custom'"
-         :class="{ 'modal-buttons-1': type === 'alert', 'modal-buttons-2': type === 'confirm' || type === 'prompt' }">
-      <span class="modal-button" @click="$emit(type, false)"
-            v-show="type === 'confirm' || type === 'prompt' || type === 'login' || type === 'password'">Cancel</span>
-      <span class="modal-button modal-button-bold" @click="$emit(type, true)">OK</span>
+  <div>
+    <div class="preloader-indicator-overlay" v-show="showIndic"></div>
+    <div class="preloader-indicator-modal" v-show="showIndic">
+      <span class="preloader preloader-white"></span>
     </div>
 
-    <div class="modal-buttons"
-         :class="['modal-buttons-' + buttons.length, { 'modal-buttons-vertical': vertical }]"
-         v-show="type === 'custom'">
-      <span class="modal-button"
-            v-for="btn in buttons"
-            @click="$emit(type, $index, btn)"
-            :class="{ 'modal-button-bold': btn.bold }"
-            v-text="btn.text">
-      </span>
+    <div class="modal"
+         ref="modal"
+         :style="{ 'margin-top': marginTop }"
+         v-show="show"
+         :class="{ 'modal-no-buttons': type === 'preloader', 'modal-preloader': type === 'preloader' }">
+
+      <div class="modal-inner">
+        <div class="modal-title" v-text="title"></div>
+        <div class="modal-text" v-show="type === 'preloader'">
+          <div class="preloader"></div>
+        </div>
+        <div class="modal-text" v-show="type !== 'preloader'" v-text="text"></div>
+        <div class="input-field" v-show="type === 'prompt'">
+          <input type="text" class="modal-text-input" v-model="promptValue">
+        </div>
+        <div class="input-field" v-show="type === 'password'">
+          <input type="password" class="modal-text-input" placeholder="Password" v-model="password">
+        </div>
+        <div class="input-field modal-input-double" v-show="type === 'login'">
+          <input type="text"
+                 placeholder="Username"
+                 class="modal-text-input"
+                 v-model="username">
+        </div>
+        <div class="input-field modal-input-double" v-show="type === 'login'">
+          <input type="password"
+                 name="modal-password"
+                 placeholder="Password"
+                 class="modal-text-input"
+                 v-model="password">
+        </div>
+      </div>
+
+      <div class="modal-buttons"
+           v-show="type !== 'custom'"
+           :class="{ 'modal-buttons-1': type === 'alert', 'modal-buttons-2': type === 'confirm' || type === 'prompt' }">
+        <span class="modal-button"
+              @click="$emit(type, false)"
+              v-show="type === 'confirm' || type === 'prompt' || type === 'login' || type === 'password'">
+          Cancel
+        </span>
+        <span class="modal-button modal-button-bold" @click="$emit(type, true)">OK</span>
+      </div>
+
+      <div class="modal-buttons"
+           :class="['modal-buttons-' + buttons.length, { 'modal-buttons-vertical': vertical }]"
+           v-show="type === 'custom'">
+        <span class="modal-button"
+              v-for="(btn, index) in buttons"
+              @click="$emit(type, index, btn)"
+              :class="{ 'modal-button-bold': btn.bold }"
+              v-text="btn.text">
+        </span>
+      </div>
     </div>
   </div>
 </template>
 
-<script type="text/babel">
-  import modalTransition from '../mixins/modal-transition'
+<script>
+  import * as modalOverlay from '../shared-nodes/modal-overlay'
+  import insertToBody from '../utils/extract-children'
+
   export default {
     data () {
       return {
@@ -76,12 +83,16 @@
         marginTop: ''
       }
     },
-    mixins: [modalTransition],
+    watch: {
+      show (val) {
+        modalOverlay.setShow(val)
+      }
+    },
     methods: {
       _show () {
         this.show = true
         this.$nextTick(() => {
-          const { modal } = this.$els
+          const { modal } = this.$refs
           if (!modal) return
           this.marginTop = '-' + (modal.clientHeight / 2) + 'px'
         })
@@ -118,9 +129,9 @@
         this.title = title
         this._show()
         return new Promise(resolve => {
-          this.$once('confirm', ok => {
+          this.$once('confirm', result => {
             this.show = false
-            this.$nextTick(() => resolve(ok))
+            this.$nextTick(() => resolve(result))
           })
         })
       },
@@ -138,9 +149,9 @@
         this.promptValue = ''
         this._show()
         return new Promise(resolve => {
-          this.$once('prompt', ok => {
+          this.$once('prompt', result => {
             this.show = false
-            this.$nextTick(() => resolve(ok ? this.promptValue : null))
+            this.$nextTick(() => resolve(result ? this.promptValue : null))
           })
         })
       },
@@ -158,9 +169,9 @@
         this.username = this.password = ''
         this._show()
         return new Promise(resolve => {
-          this.$once('login', ok => {
+          this.$once('login', result => {
             this.show = false
-            this.$nextTick(() => resolve(ok ? {
+            this.$nextTick(() => resolve(result ? {
               username: this.username,
               password: this.password
             } : null))
@@ -181,9 +192,9 @@
         this.password = ''
         this._show()
         return new Promise(resolve => {
-          this.$once('password', ok => {
+          this.$once('password', result => {
             this.show = false
-            this.$nextTick(() => resolve(ok ? this.password : null))
+            this.$nextTick(() => resolve(result ? this.password : null))
           })
         })
       },
@@ -239,6 +250,12 @@
           })
         })
       }
+    },
+    mounted () {
+      this._removeInsert = insertToBody(this.$el, document.body)
+    },
+    beforeDestroy () {
+      this._removeInsert()
     }
   }
 </script>

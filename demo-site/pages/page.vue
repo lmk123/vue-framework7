@@ -3,7 +3,7 @@
   <component :is="$route.params.name"></component>
 </template>
 
-<script type="text/babel">
+<script>
   import components from '../page-components'
   export default {
     components

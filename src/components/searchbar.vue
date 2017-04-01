@@ -1,30 +1,33 @@
 <template>
-  <form class="searchbar searchbar-init"
-        :class="{ 'searchbar-active': active, 'searchbar-not-empty': query }"
-        @submit.prevent="search">
-    <div class="searchbar-input">
-      <input type="search"
-             :placeholder="placeholder"
-             v-model="query"
-             v-el:input
-             @focus="show">
-      <a class="searchbar-clear" @click="clear"></a>
-    </div>
-    <a class="searchbar-cancel"
-       style="display:block"
-       :style="{ marginRight: active ? '0px' : '-53px' }"
-       v-text="cancelText"
-       @click="cancel"
-       v-el:cancel></a>
-  </form>
+  <div>
+    <form class="searchbar searchbar-init"
+          :class="{ 'searchbar-active': active, 'searchbar-not-empty': query }"
+          @submit.prevent="search">
+      <div class="searchbar-input">
+        <input type="search"
+               :placeholder="placeholder"
+               v-model="query"
+               ref="input"
+               @focus="show">
+        <a class="searchbar-clear" @click="clear"></a>
+      </div>
+      <!-- TODO 将 margin-right 计算出来而不是写死 -->
+      <a class="searchbar-cancel"
+         style="display: block"
+         :style="{ 'margin-right': active ? '0px' : '-53px' }"
+         @click="cancel">
+        {{ cancelText }}
+      </a>
+    </form>
 
-  <div class="searchbar-overlay"
-       :class="{ 'searchbar-overlay-active': !hideOverlay && active && !query }"
-       @click="hide">
+    <div class="searchbar-overlay"
+         :class="{ 'searchbar-overlay-active': !hideOverlay && active && !query }"
+         @click="hide">
+    </div>
   </div>
 </template>
 
-<script type="text/babel">
+<script>
   export default {
     name: 'f7-searchbar',
     props: {
@@ -64,7 +67,7 @@
       clear () {
         this.query = ''
         this.$nextTick(() => {
-          this.$els.input.focus()
+          this.$refs.input.focus()
           this.$emit('clear-search')
         })
       },
