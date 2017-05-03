@@ -1,0 +1,52 @@
+{
+  "name": "vue-framework7",
+  "version": "0.5.0",
+  "description": "Framework7 components built with Vue.js",
+  "main": "dist/vue-f7.nosh.common.js",
+  "module": "dist/vue-f7.esm.js",
+  "unpkg": "dist/vue-f7.js",
+  "keywords": [
+    "vue",
+    "framework7",
+    "component"
+  ],
+  "files": [
+    "src",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmk123/vue-framework7.git"
+  },
+  "scripts": {
+    "lint": "eslint --ignore-pattern '/dist/' \"**/*.{js,vue}\"",
+    "build": "node build/build.js",
+    "prepublish": "yarn run build"
+  },
+  "peerDependencies": {
+    "framework7": "^1.4.2",
+    "vue": "^2.2.6"
+  },
+  "devDependencies": {
+    "eslint": "^3.17.1",
+    "eslint-config-standard": "^10.2.0",
+    "eslint-plugin-html": "^2.0.1",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "framework7": "^1.6.0",
+    "fs-extra": "^2.1.2",
+    "rollup": "^0.41.6",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-vue": "^2.3.1",
+    "uglify-js": "^2.8.19",
+    "vue": "^2.3.2"
+  },
+  "author": "Milk Lee (https://github.com/lmk123)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lmk123/vue-framework7/issues"
+  },
+  "homepage": "https://github.com/lmk123/vue-framework7#readme"
+}
