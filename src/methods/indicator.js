@@ -6,7 +6,7 @@ let idt
 
 let init = function () {
   init = noop
-  idt = new (Vue.extend(Indicator))
+  idt = new (Vue.extend(Indicator))()
   idt.$mount()
   document.body.appendChild(idt.$el)
 }
@@ -21,4 +21,3 @@ export function hideIndicator () {
   init()
   idt.hide()
 }
-

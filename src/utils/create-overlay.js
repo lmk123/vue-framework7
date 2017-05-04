@@ -89,8 +89,8 @@ class Overlay {
 
   destroy () {
     delete instances[this.name]
-    const { events } = this
-    if (this.node) {
+    const { events, node } = this
+    if (node) {
       for (let name in events) {
         events[name].forEach(handler => {
           node.removeEventListener(name, handler)

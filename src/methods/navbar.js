@@ -12,5 +12,5 @@ export function hideNavbar (name, useAnimate) {
 
 export function sizeNavbar (name) {
   const vm = get('f7-navbar', name)
-  if (vm) vm.size(useAnimate)
+  if (vm) vm.size()
 }

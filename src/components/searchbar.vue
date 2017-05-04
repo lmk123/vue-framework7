@@ -21,7 +21,6 @@
 </template>
 
 <script>
-  import nextFrame from '../utils/next-frame'
   import createOverlay from '../utils/create-overlay'
   import vmName from '../mixins/vm-name'
 
