@@ -2,9 +2,9 @@
   "name": "vue-framework7",
   "version": "0.5.0-alpha.1",
   "description": "Framework7 components built with Vue.js",
-  "main": "dist/vue-f7.nosh.common.js",
-  "module": "dist/vue-f7.esm.js",
-  "unpkg": "dist/vue-f7.js",
+  "main": "dist/vue-framework7.nosh.common.js",
+  "module": "dist/vue-framework7.esm.js",
+  "unpkg": "dist/vue-framework7.js",
   "keywords": [
     "vue",
     "framework7",
