@@ -1,0 +1,36 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "browsers": [
+            "last 2 versions"
+          ]
+        },
+        "modules": false,
+        "loose": true,
+        "debug": false,
+        "exclude": [
+          "transform-async-to-generator",
+          "transform-regenerator",
+          "transform-es2015-typeof-symbol",
+          "transform-es2015-unicode-regex",
+          "transform-regenerator",
+          "transform-es2015-for-of"
+        ]
+      }
+    ]
+  ],
+  "plugins": [
+    "syntax-dynamic-import",
+    [
+      "transform-runtime",
+      {
+        "helpers": true,
+        "polyfill": false,
+        "regenerator": false
+      }
+    ]
+  ]
+}
