@@ -10,7 +10,16 @@ module.exports = merge(webpackBaseConfig, {
   module: {
     rules: utils.styleLoaders({ sourceMap: config.dev.sourceMap })
   },
-  devtool: '#cheap-module-eval-source-map',
+  // dev 的时候使用本地的 vue-framework7
+  resolve: {
+    alias: {
+      'vue-framework7': utils.absolutePath('../src')
+    }
+  },
+  resolveLoader: {
+    modules: [utils.absolutePath('node_modules')]
+  },
+  devtool: 'source-map',
   plugins: [
     new webpack.DefinePlugin({
       'process.env': config.dev.env

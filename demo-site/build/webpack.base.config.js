@@ -24,7 +24,10 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel-loader',
-        include: utils.absolutePath('src')
+        include: [
+          utils.absolutePath('src'),
+          utils.absolutePath('../src')
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
