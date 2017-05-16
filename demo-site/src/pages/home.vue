@@ -40,6 +40,10 @@
           {
             label: 'Indicator',
             to: '/indicator'
+          },
+          {
+            label: 'Modal',
+            to: '/modal'
           }
         ]
       }

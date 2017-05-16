@@ -29,6 +29,10 @@ const router = new VueRouter({
     {
       path: '/indicator',
       component: () => asyncLoad(import('./pages/indicator.vue'))
+    },
+    {
+      path: '/modal',
+      component: () => asyncLoad(import('./pages/modal.vue'))
     }
   ]
 })
