@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --watch --config build/webpack.dev.config.js",
     "build": "webpack --config build/webpack.prod.config.js",
-    "deploy": "npm run build && gh-pages -d dist -a"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "framework7": "^1.6.0",
