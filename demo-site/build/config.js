@@ -10,7 +10,8 @@ module.exports = {
     env: {
       NODE_ENV: '"production"'
     },
-    analyzer: false
+    analyzer: false,
+    serviceWorker: true
   },
   dev: {
     port: 8080,

@@ -1,5 +1,6 @@
 var path = require('path')
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
+var IS_PRODUCTION = process.env.NODE_ENV === 'production'
 
 exports.absolutePath = function (prePath) {
   return path.resolve(__dirname, '..', prePath)
@@ -13,7 +14,7 @@ function getCssLoaders (options) {
   var cssLoader = {
     loader: 'css-loader',
     options: {
-      minimize: process.env.NODE_ENV === 'production',
+      minimize: IS_PRODUCTION,
       sourceMap: options.sourceMap
     }
   }
@@ -80,4 +81,23 @@ exports.styleLoaders = function (options) {
     })
   }
   return output
+}
+
+exports.enableOffline = function (webpackConfig) {
+  webpackConfig.plugins.push(new (require('offline-plugin'))({
+    safeToUseOptionalCaches: true,
+    caches: {
+      main: IS_PRODUCTION
+        ? ['./', '**/@(manifest|vendor|main).*.js', '**/@(main|vendor).*.css']
+        : ['./', 'main.js'],
+      // additional 里的匹配会自动去除 main 里已经匹配到的文件
+      additional: ['**/*.@(png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf|otf)', '**/*.js']
+    },
+    externals: ['./'],
+    excludes: ['**/*.map'],
+    ServiceWorker: {
+      events: true
+    },
+    AppCache: false
+  }))
 }
