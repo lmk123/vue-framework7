@@ -10,7 +10,7 @@ export * from './methods/navbar'
 export * from './methods/popup'
 import searchbar from './methods/searchbar'
 export * from './methods/toolbar'
-export * from './methods/modal'
+export * from './methods/modal/index'
 
 export {
   Page,
