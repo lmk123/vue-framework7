@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import createOverlay from '../utils/create-overlay'
+  import createOverlay from '../../utils/create-overlay'
   // TODO createOverlay 里也用到了这个常量
   const OVERLAY_NAME = 'preloader-indicator'
   export default {

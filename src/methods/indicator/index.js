@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Indicator from './_indicator.vue'
-import noop from '../utils/noop'
+import noop from '../../utils/noop'
 
 let idt
 

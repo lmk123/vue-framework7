@@ -5,7 +5,7 @@ import Popup from './components/popup.vue'
 import PageAnimation from './components/page-animation.vue'
 import SearchBar from './components/searchbar.vue'
 
-export * from './methods/indicator'
+export * from './methods/indicator/index'
 export * from './methods/navbar'
 export * from './methods/popup'
 import searchbar from './methods/searchbar'
