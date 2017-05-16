@@ -67,6 +67,7 @@ module.exports = merge(webpackBaseConfig, {
   ],
   devServer: {
     contentBase: utils.absolutePath(config.staticRoot),
+    historyApiFallback: true,
     noInfo: true,
     port: config.dev.port,
     host: config.dev.externally ? '0.0.0.0' : 'localhost',

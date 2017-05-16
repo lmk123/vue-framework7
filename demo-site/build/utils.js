@@ -94,7 +94,7 @@ exports.enableOffline = function (webpackConfig) {
       additional: ['**/*.@(png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf|otf)', '**/*.js']
     },
     externals: ['./'],
-    excludes: ['**/*.map'],
+    excludes: ['**/*.map', '_redirects'],
     ServiceWorker: {
       events: true
     },
