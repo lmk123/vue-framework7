@@ -19,8 +19,8 @@
     "url": "git+https://github.com/lmk123/vue-framework7.git"
   },
   "scripts": {
-    "start": "cd demo-site && npm start",
-    "deploy:demo": "cd demo-site && npm run deploy",
+    "start": "cd demo-site && yarn start",
+    "deploy:demo": "cd demo-site && yarn run deploy",
     "lint": "eslint --ignore-pattern '/dist/' \"**/*.{js,vue}\"",
     "build": "node build/build.js",
     "prepublish": "yarn run build"
