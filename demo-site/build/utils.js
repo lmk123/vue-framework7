@@ -93,6 +93,14 @@ exports.enableOffline = function (webpackConfig) {
       // additional 里的匹配会自动去除 main 里已经匹配到的文件
       additional: ['**/*.@(png|jpg|jpeg|gif|svg|woff|woff2|eot|ttf|otf)', '**/*.js']
     },
+    cacheMaps: [
+      {
+        match: function () {
+          return new URL('/', location)
+        },
+        requestTypes: ['navigate']
+      }
+    ],
     externals: ['./'],
     excludes: ['**/*.map', '_redirects'],
     ServiceWorker: {
