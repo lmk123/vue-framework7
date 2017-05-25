@@ -14,7 +14,8 @@ module.exports = merge(webpackBaseConfig, {
   resolve: {
     alias: {
       'vue-framework7': utils.absolutePath('../src')
-    }
+    },
+    modules: [utils.absolutePath('node_modules')]
   },
   resolveLoader: {
     modules: [utils.absolutePath('node_modules')]
