@@ -33,6 +33,10 @@ const router = new VueRouter({
     {
       path: '/modal',
       component: () => asyncLoad(import('./pages/modal.vue'))
+    },
+    {
+      path: '/action-sheet',
+      component: () => asyncLoad(import('./pages/action-sheet.vue'))
     }
   ]
 })

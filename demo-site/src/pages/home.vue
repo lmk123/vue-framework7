@@ -44,6 +44,10 @@
           {
             label: 'Modal',
             to: '/modal'
+          },
+          {
+            label: 'Action Sheet',
+            to: '/action-sheet'
           }
         ]
       }
