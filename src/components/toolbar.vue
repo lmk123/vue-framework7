@@ -10,6 +10,11 @@
   import { show, hide } from '../utils/bar-switch'
   import vmName from '../mixins/vm-name'
 
+  // TODO 临时修复一下在 iOS 上显示时无动画的问题
+  const style = document.createElement('style')
+  style.innerText = '.page>.toolbar,.view>.toolbar,.views>.toolbar{position:fixed}'
+  document.head.appendChild(style)
+
   export default {
     name: 'f7-toolbar',
     mixins: [vmName],

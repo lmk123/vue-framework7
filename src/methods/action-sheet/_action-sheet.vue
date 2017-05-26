@@ -1,5 +1,6 @@
 <template>
-  <div class="actions-modal">
+  <!-- TODO 临时修复一下在 iOS 上显示时无动画的问题 -->
+  <div class="actions-modal" style="position:fixed">
     <div class="actions-modal-group" v-for="buttons in groups">
       <div v-for="btn in buttons"
            :class="getBtnClass(btn)"
@@ -25,7 +26,7 @@
     mixins: [m],
     methods: {
       choose (btn) {
-        if (btn.label) return
+        if (btn.label || btn.disabled) return
         this.hide()
         if (typeof btn.onClick === 'function') btn.onClick()
         this.$emit('choose', btn)

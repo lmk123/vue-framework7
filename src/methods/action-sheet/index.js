@@ -15,7 +15,7 @@ export function actions (buttons) {
   if (!Array.isArray(buttons) || !buttons.length) return
   init()
   actionSheet.groups = Array.isArray(buttons[0]) ? buttons : [buttons]
-  actionSheet.show()
+  Vue.nextTick(actionSheet.show)
   return new Promise((resolve, reject) => {
     actionSheet.$once('choose', btn => {
       if (btn == null) {

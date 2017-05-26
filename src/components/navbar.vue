@@ -1,5 +1,8 @@
 <template>
-  <div class="navbar">
+  <!-- 修复在 iOS 上显示时没有动画的问题。
+   action-sheet 也有同样的问题所以也加了这个样式。
+   -->
+  <div class="navbar" style="position:fixed">
     <div class="navbar-inner">
       <div class="left" ref="left">
         <slot name="left"></slot>
@@ -17,6 +20,11 @@
 <script>
   import { show, hide } from '../utils/bar-switch'
   import vmName from '../mixins/vm-name'
+
+  // TODO 临时修复一下在 iOS 上显示时无动画的问题
+  const style = document.createElement('style')
+  style.innerText = '.page>.navbar,.view>.navbar,.views>.navbar{position:fixed}'
+  document.head.appendChild(style)
 
   export default {
     name: 'f7-navbar',
