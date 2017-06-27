@@ -1,8 +1,5 @@
 <template>
-  <!-- 修复在 iOS 上显示时没有动画的问题。
-   action-sheet 也有同样的问题所以也加了这个样式。
-   -->
-  <div class="navbar" style="position:fixed">
+  <div class="navbar">
     <div class="navbar-inner">
       <div class="left" ref="left">
         <slot name="left"></slot>

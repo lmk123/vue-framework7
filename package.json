@@ -1,6 +1,6 @@
 {
   "name": "vue-framework7",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description": "Framework7 components built with Vue.js",
   "main": "dist/vue-framework7.nosh.common.js",
   "module": "dist/vue-framework7.esm.js",

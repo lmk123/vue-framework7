@@ -92,6 +92,7 @@
     },
     mounted () {
       if (this.overlay) {
+        // TODO BUG：seachbar 共用 overlay 导致新的 f7-searchbar 没有 overlay
         const overlay = this.lay = createOverlay('searchbar', this.$el.parentElement)
         overlay.on('click', () => {
           this.active = false
