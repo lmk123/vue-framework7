@@ -48,6 +48,10 @@
           {
             label: 'Action Sheet',
             to: '/action-sheet'
+          },
+          {
+            label: 'Progress Bar',
+            to: '/progress-bar'
           }
         ]
       }

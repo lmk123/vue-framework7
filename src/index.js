@@ -4,6 +4,7 @@ import Toolbar from './components/toolbar.vue'
 import Popup from './components/popup.vue'
 import PageAnimation from './components/page-animation.vue'
 import SearchBar from './components/searchbar.vue'
+import ProgressBar from './components/progressbar.vue'
 
 export * from './methods/indicator/index'
 export * from './methods/navbar'
@@ -12,6 +13,7 @@ import searchbar from './methods/searchbar'
 export * from './methods/toolbar'
 export * from './methods/modal/index'
 export * from './methods/action-sheet/index'
+export * from './methods/progressbar'
 
 export {
   Page,
@@ -19,7 +21,8 @@ export {
   Toolbar,
   Popup,
   PageAnimation,
-  SearchBar
+  SearchBar,
+  ProgressBar
 }
 
 export function install (Vue) {
@@ -29,7 +32,8 @@ export function install (Vue) {
     Toolbar,
     Popup,
     PageAnimation,
-    SearchBar
+    SearchBar,
+    ProgressBar
   ].forEach(cpt => {
     Vue.component(cpt.name, cpt)
   })
