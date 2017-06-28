@@ -29,9 +29,6 @@
         </p>
         <p>Overlay with determinate progress bar on top of the app:</p>
         <p>
-          <f7-progressbar ref="p3" :progress="p3" hidden top></f7-progressbar>
-        </p>
-        <p>
           <a href="#" class="button" @click.prevent="loadingP3">Start Loading</a>
         </p>
       </div>
@@ -67,6 +64,8 @@
 </template>
 
 <script>
+  import { showProgressbar, hideProgressbar } from 'vue-framework7'
+
   function loading (onProgressChange, onEnd) {
     let progress = 0
 
@@ -104,27 +103,19 @@
         })
       },
       loadingP3 () {
-        const { p3 } = this.$refs
-        p3.show()
-        loading(progress => this.p3 = progress, () => {
-          this.p3 = 0
-          p3.hide()
+        showProgressbar(0)
+        loading(progress => showProgressbar(progress), () => {
+          hideProgressbar()
         })
       },
       loadingP4 () {
-        const { p4 } = this.$refs
-        p4.show()
-        setTimeout(p4.hide, 3000)
+        showProgressbar()
+        setTimeout(() => hideProgressbar(), 3000)
       },
       loadingP5 () {
-        const { p5 } = this.$refs
-        p5.show()
-        setTimeout(p5.hide, 3000)
+        showProgressbar(true)
+        setTimeout(() => hideProgressbar(), 3000)
       }
     }
   }
 </script>
-
-<style lang="scss" type="text/scss">
-
-</style>

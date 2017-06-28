@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import { oneTransitionEnd } from '../utils/transition'
+  import { oneAnimationEnd } from '../utils/transition'
   import vmName from '../mixins/vm-name'
 
   export default {
@@ -78,17 +78,19 @@
         this.speed = speed
       },
       show () {
+        if (this.isShow) return
         this.isShow = true
         this.$nextTick(() => {
           this.$el.classList.add('progressbar-in')
         })
       },
       hide () {
+        if (!this.isShow) return
         const { $el } = this
         const { classList } = $el
         classList.remove('progressbar-in')
         classList.add('progressbar-out')
-        oneTransitionEnd($el, () => {
+        oneAnimationEnd($el, () => {
           this.isShow = false
           classList.remove('progressbar-out')
         })

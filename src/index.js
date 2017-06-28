@@ -13,6 +13,7 @@ import searchbar from './methods/searchbar'
 export * from './methods/toolbar'
 export * from './methods/modal/index'
 export * from './methods/action-sheet/index'
+export * from './methods/progressbar'
 
 export {
   Page,
