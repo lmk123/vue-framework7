@@ -37,6 +37,10 @@ const router = new VueRouter({
     {
       path: '/action-sheet',
       component: () => asyncLoad(import('./pages/action-sheet.vue'))
+    },
+    {
+      path: '/progress-bar',
+      component: () => asyncLoad(import('./pages/progress-bar.vue'))
     }
   ]
 })
