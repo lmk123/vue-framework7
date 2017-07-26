@@ -40,13 +40,15 @@ function hideModal () {
  * 弹出一个警告框
  * @param {string} text
  * @param {string} [title]
+ * @param {string} [okText]
  * @return {Promise}
  */
-export function alert (text, title = 'Notice') {
+export function alert (text, title = 'Notice', okText = 'OK') {
   init()
   modalVm.type = ALERT
   modalVm.text = text
   modalVm.title = title
+  modalVm.okText = okText
   showModal()
   return new Promise(resolve => {
     modalVm.$once(ALERT, () => {
@@ -60,13 +62,17 @@ export function alert (text, title = 'Notice') {
  * 弹出一个确认框
  * @param {string} text
  * @param {string} [title]
+ * @param {string} [okText]
+ * @param {string} [cancelText]
  * @return {Promise}
  */
-export function confirm (text, title = 'Confirm') {
+export function confirm (text, title = 'Confirm', okText = 'OK', cancelText = 'Cancel') {
   init()
   modalVm.type = CONFIRM
   modalVm.text = text
   modalVm.title = title
+  modalVm.okText = okText
+  modalVm.cancelText = cancelText
   showModal()
   return new Promise((resolve, reject) => {
     modalVm.$once(CONFIRM, ok => {
@@ -86,14 +92,18 @@ export function confirm (text, title = 'Confirm') {
  * 弹出一个 Prompt 框
  * @param {String} text
  * @param {String} [title]
+ * @param {string} [okText]
+ * @param {string} [cancelText]
  * @return {Promise}
  */
-export function prompt (text, title = 'Prompt') {
+export function prompt (text, title = 'Prompt', okText = 'OK', cancelText = 'Cancel') {
   init()
   modalVm.type = PROMPT
   modalVm.text = text
   modalVm.title = title
   modalVm.promptValue = ''
+  modalVm.okText = okText
+  modalVm.cancelText = cancelText
   showModal()
   return new Promise((resolve, reject) => {
     modalVm.$once(PROMPT, ok => {
@@ -114,13 +124,17 @@ export function prompt (text, title = 'Prompt') {
  * 显示登录框
  * @param {string} text
  * @param {string} [title]
+ * @param {string} [okText]
+ * @param {string} [cancelText]
  * @returns {Promise}
  */
-export function modalLogin (text, title = 'Login') {
+export function modalLogin (text, title = 'Login', okText = 'OK', cancelText = 'Cancel') {
   init()
   modalVm.type = LOGIN
   modalVm.text = text
   modalVm.title = title
+  modalVm.okText = okText
+  modalVm.cancelText = cancelText
   modalVm.username = modalVm.password = ''
   showModal()
   return new Promise((resolve, reject) => {
@@ -145,13 +159,17 @@ export function modalLogin (text, title = 'Login') {
  * 显示密码框
  * @param {string} text
  * @param {string} title
+ * @param {string} [okText]
+ * @param {string} [cancelText]
  * @return {Promise}
  */
-export function modalPassword (text, title = 'Password') {
+export function modalPassword (text, title = 'Password', okText = 'OK', cancelText = 'Cancel') {
   init()
   modalVm.type = PASSWORD
   modalVm.text = text
   modalVm.title = title
+  modalVm.okText = okText
+  modalVm.cancelText = cancelText
   modalVm.password = ''
   showModal()
   return new Promise((resolve, reject) => {

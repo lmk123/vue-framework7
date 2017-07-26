@@ -67,9 +67,9 @@
           <span class="modal-button"
                 @click="$emit(type, false)"
                 v-if="hasCancelButton">
-            Cancel
+            {{ cancelText }}
           </span>
-        <span class="modal-button modal-button-bold" @click="$emit(type, true)">OK</span>
+        <span class="modal-button modal-button-bold" @click="$emit(type, true)">{{ okText }}</span>
       </div>
     </div>
   </modal-transition>
@@ -94,7 +94,9 @@
         text: '',
         buttons: [],
         vertical: false,
-        marginTop: ''
+        marginTop: '',
+        okText: 'OK',
+        cancelText: 'Cancel'
       }
     },
     computed: {
