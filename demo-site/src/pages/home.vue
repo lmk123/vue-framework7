@@ -52,6 +52,10 @@
           {
             label: 'Progress Bar',
             to: '/progress-bar'
+          },
+          {
+            label: 'Pull to refresh',
+            to: '/ptr'
           }
         ]
       }
