@@ -73,7 +73,7 @@
         this.pullInitialized = false
         this.pullState = defaultPullState()
         const { content } = this.$refs
-        content.classList.remove('pull-to-refresh-content')
+        content.classList.remove('pull-to-refresh-content', 'active-state', 'pull-down', 'pull-up', 'refreshing')
         content.removeEventListener(TOUCH_START, this._onTouchStart)
         content.removeEventListener(TOUCH_MOVE, this._onTouchMove)
         content.removeEventListener(TOUCH_END, this._onTouchEnd)
@@ -110,8 +110,7 @@
         const { content } = this.$refs
         content.classList.remove('active-state')
 
-        let distance = pageY - pullState.startY
-        if (distance < 0) distance = 0
+        const distance = pageY - pullState.startY
         pullState.distance = distance
         if (pullState.up = distance >= this.ptrDistance) {
           content.classList.remove('pull-down')
@@ -169,6 +168,11 @@
     mounted () {
       if (this.pull) {
         this._initPull()
+      }
+    },
+    beforeDestroy () {
+      if (this.pull) {
+        this._destroyPull()
       }
     }
   }
