@@ -1,9 +1,12 @@
 <template>
   <transition
       :css="false"
+
       @before-enter="beforeEnter"
       @enter="enter"
       @after-enter="afterEnter"
+
+      @before-leave="beforeLeave"
       @leave="leave"
       @after-leave="afterLeave">
     <slot></slot>
@@ -14,7 +17,7 @@
   import { oneAnimationEnd } from '../utils/transition'
 
   const style = document.createElement('style')
-  style.textContent = '.page-from-center-to-right{z-index:9999}'
+  style.textContent = '.page-from-center-to-right{z-index:300}.page-on-center{z-index:200}.page-on-left,.page-on-right{z-index:100}'
   document.head.appendChild(style)
 
   export default {
@@ -48,12 +51,19 @@
           done()
           return
         }
-        oneAnimationEnd(el, done)
-        el.classList.add(`page-from-${this.against}-to-center`)
+        setTimeout(() => {
+          oneAnimationEnd(el, done)
+          el.classList.remove(`page-on-${this.against}`)
+          el.classList.add(`page-from-${this.against}-to-center`)
+        }, 0)
       },
       afterEnter (el) {
         if (this.isNone) return
-        el.classList.remove(`page-on-${this.against}`, `page-from-${this.against}-to-center`)
+        el.classList.remove(`page-from-${this.against}-to-center`)
+        el.classList.add('page-on-center')
+      },
+
+      beforeLeave (el) {
         el.classList.add('page-on-center')
       },
       leave (el, done) {
@@ -61,8 +71,11 @@
           done()
           return
         }
-        oneAnimationEnd(el, done)
-        el.classList.add(`page-from-center-to-${this.direction}`)
+        setTimeout(() => {
+          oneAnimationEnd(el, done)
+          el.classList.remove('page-on-center')
+          el.classList.add(`page-from-center-to-${this.direction}`)
+        }, 0)
       },
       afterLeave (el) {
         if (this.isNone) return
