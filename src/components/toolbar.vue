@@ -9,11 +9,10 @@
 <script>
   import { show, hide } from '../utils/bar-switch'
   import vmName from '../mixins/vm-name'
+  import insertStyle from '../utils/insert-style'
 
-  // TODO 临时修复一下在 iOS 上显示时无动画的问题
-  const style = document.createElement('style')
-  style.innerText = '.page>.toolbar,.view>.toolbar,.views>.toolbar{position:fixed}'
-  document.head.appendChild(style)
+  // https://stackoverflow.com/questions/25827559/rendering-the-dom-outside-the-viewport-in-safari-ios
+  insertStyle('.toolbar.toolbar-hidden{-webkit-transform:translate3d(0,99%,0);transform:translate3d(0,99%,0)}')
 
   export default {
     name: 'f7-toolbar',

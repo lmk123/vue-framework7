@@ -15,10 +15,9 @@
 
 <script>
   import { oneAnimationEnd } from '../utils/transition'
+  import insertStyle from '../utils/insert-style'
 
-  const style = document.createElement('style')
-  style.textContent = '.page-from-center-to-right{z-index:300}.page-on-center{z-index:200}.page-on-left,.page-on-right{z-index:100}'
-  document.head.appendChild(style)
+  insertStyle('.page-from-center-to-right{z-index:300}.page-on-center{z-index:200}.page-on-left,.page-on-right{z-index:100}')
 
   export default {
     name: 'f7-page-animation',
