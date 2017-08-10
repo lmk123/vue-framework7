@@ -1,3 +1,5 @@
+import './utils/device'
+
 import Page from './components/page.vue'
 import Navbar from './components/navbar.vue'
 import Toolbar from './components/toolbar.vue'
