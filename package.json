@@ -21,7 +21,7 @@
   "scripts": {
     "start": "cd demo-site && yarn start",
     "deploy:demo": "cd demo-site && yarn run deploy",
-    "lint": "eslint --ignore-pattern '/dist/' \"**/*.{js,vue}\"",
+    "lint": "eslint --ignore-pattern '/dist/' --ignore-pattern '/demo-site/' \"**/*.{js,vue}\"",
     "build": "node build/build.js",
     "prepublish": "yarn run build"
   },

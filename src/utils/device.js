@@ -3,12 +3,9 @@
 var device = {}
 var ua = navigator.userAgent
 // var $ = Dom7
-var $ = function (selector) {
-  document.querySelectorAll(selector)
-}
 
-var windows = ua.match(/(Windows Phone);?[\s\/]+([\d.]+)?/)
-var android = ua.match(/(Android);?[\s\/]+([\d.]+)?/)
+var windows = ua.match(/(Windows Phone);?[\s/]+([\d.]+)?/)
+var android = ua.match(/(Android);?[\s/]+([\d.]+)?/)
 var ipad = ua.match(/(iPad).*OS\s([\d_]+)/)
 var ipod = ua.match(/(iPod)(.*OS\s([\d_]+))?/)
 var iphone = !ipad && ua.match(/(iPhone\sOS|iOS)\s([\d_]+)/)
@@ -99,13 +96,12 @@ if (device.os) {
       classNames.push('ios-gt-' + i)
     }
   }
-
 }
+
 // Status bar classes
 if (device.statusBar) {
   classNames.push('with-statusbar-overlay')
-}
-else {
+} else {
   // $('html').removeClass('with-statusbar-overlay')
   document.documentElement.classList.remove('with-statusbar-overlay')
 }
