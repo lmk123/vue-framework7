@@ -41,6 +41,10 @@ const router = new VueRouter({
     {
       path: '/progress-bar',
       component: () => asyncLoad(import('./pages/progress-bar.vue'))
+    },
+    {
+      path: '/ptr',
+      component: () => asyncLoad(import('./pages/pull-to-refresh.vue'))
     }
   ]
 })
