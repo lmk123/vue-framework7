@@ -23,7 +23,7 @@
     "deploy:demo": "cd demo-site && yarn run deploy",
     "lint": "eslint --ignore-pattern '/dist/' --ignore-pattern '/demo-site/' \"**/*.{js,vue}\"",
     "build": "node build/build.js",
-    "prepublish": "yarn run build"
+    "prepublishOnly": "yarn run build"
   },
   "peerDependencies": {
     "framework7": "^1.4.2",
