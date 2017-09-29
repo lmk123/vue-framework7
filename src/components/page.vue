@@ -49,6 +49,12 @@
       pull: {
         type: Function
       },
+      ptrCondition: {
+        type: Function,
+        default () {
+          return this.$refs.content.scrollTop === 0
+        }
+      },
       ptrDistance: {
         default: 72
       }
@@ -80,7 +86,7 @@
       },
       _onTouchStart (event) {
         const { content } = this.$refs
-        if (content.scrollTop > 0) return
+        if (!this.ptrCondition()) return
 
         delete this.scrolling
         const { pullState } = this
