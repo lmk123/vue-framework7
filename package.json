@@ -1,6 +1,6 @@
 {
   "name": "vue-framework7",
-  "version": "0.5.7",
+  "version": "0.5.8",
   "description": "Framework7 components built with Vue.js",
   "main": "dist/vue-framework7.nosh.common.js",
   "module": "dist/vue-framework7.esm.js",
@@ -20,10 +20,10 @@
   },
   "scripts": {
     "start": "cd demo-site && yarn start",
-    "deploy:demo": "cd demo-site && yarn run deploy",
+    "deploy-demo": "cd demo-site && yarn run deploy",
     "lint": "eslint --ignore-pattern '/dist/' --ignore-pattern '/demo-site/' \"**/*.{js,vue}\"",
     "build": "node build/build.js",
-    "prepublishOnly": "yarn run build"
+    "prepublishOnly": "yarn run build && yarn run deploy-demo"
   },
   "peerDependencies": {
     "framework7": "^1.4.2",

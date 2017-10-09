@@ -4258,9 +4258,9 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-framework7@^0.5.7:
-  version "0.5.7"
-  resolved "https://registry.yarnpkg.com/vue-framework7/-/vue-framework7-0.5.7.tgz#a61ba688f0fbba8db92b55847145dc5c1654c09c"
+vue-framework7@^0.5.8:
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/vue-framework7/-/vue-framework7-0.5.8.tgz#7793facf05e74e9f137c84596d16925537e59328"
 
 vue-hot-reload-api@^2.1.0:
   version "2.1.0"

@@ -59,7 +59,7 @@
       afterEnter (el) {
         if (this.isNone) return
         el.classList.remove(`page-from-${this.against}-to-center`)
-        el.classList.add('page-on-center')
+        // el.classList.add('page-on-center')
       },
 
       beforeLeave (el) {
@@ -79,7 +79,7 @@
       afterLeave (el) {
         if (this.isNone) return
         el.classList.remove(`page-from-center-to-${this.direction}`)
-        el.classList.add(`page-on-${this.direction}`)
+        // el.classList.add(`page-on-${this.direction}`)
       }
     }
   }
