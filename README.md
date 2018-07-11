@@ -4,4 +4,6 @@
 [![dependencies Status](https://img.shields.io/david/lmk123/vue-framework7.svg?style=flat-square)](https://david-dm.org/lmk123/vue-framework7)
 [![devDependencies Status](https://img.shields.io/david/dev/lmk123/vue-framework7.svg?style=flat-square)](https://david-dm.org/lmk123/vue-framework7#info=devDependencies)
 
+# Deprecated, use official [framework7-vue](http://framework7.io/vue/) instead.
+
 [Framework7](http://framework7.io/) components built with [Vue.js](http://vuejs.org/).
